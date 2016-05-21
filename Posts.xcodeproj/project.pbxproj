@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D63D8C2DB4C9A9C81A2085C5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 851434F9FD4A306BF38DBA9A /* Pods.framework */; };
-		E80E3BEE1CF0C82C0085ABC3 /* PostsRequstBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BED1CF0C82C0085ABC3 /* PostsRequstBuilder.swift */; settings = {ASSET_TAGS = (); }; };
+		E80E3BEE1CF0C82C0085ABC3 /* PostsRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BED1CF0C82C0085ABC3 /* PostsRequestBuilder.swift */; settings = {ASSET_TAGS = (); }; };
 		E80E3BF01CF0C9510085ABC3 /* UsersRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BEF1CF0C9510085ABC3 /* UsersRequestBuilder.swift */; settings = {ASSET_TAGS = (); }; };
 		E80E3BF21CF0C9AC0085ABC3 /* CommentsRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BF11CF0C9AC0085ABC3 /* CommentsRequestBuilder.swift */; settings = {ASSET_TAGS = (); }; };
 		E80E3BF61CF0CA110085ABC3 /* ArrayModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BF51CF0CA110085ABC3 /* ArrayModelBuilder.swift */; settings = {ASSET_TAGS = (); }; };
@@ -124,7 +124,7 @@
 		851434F9FD4A306BF38DBA9A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90FF4EB082BF002B9D0F48A7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CFE637100B2199F938A153A4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		E80E3BED1CF0C82C0085ABC3 /* PostsRequstBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsRequstBuilder.swift; sourceTree = "<group>"; };
+		E80E3BED1CF0C82C0085ABC3 /* PostsRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsRequestBuilder.swift; sourceTree = "<group>"; };
 		E80E3BEF1CF0C9510085ABC3 /* UsersRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersRequestBuilder.swift; sourceTree = "<group>"; };
 		E80E3BF11CF0C9AC0085ABC3 /* CommentsRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsRequestBuilder.swift; sourceTree = "<group>"; };
 		E80E3BF51CF0CA110085ABC3 /* ArrayModelBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayModelBuilder.swift; sourceTree = "<group>"; };
@@ -241,7 +241,7 @@
 		E80E3BF31CF0C9B20085ABC3 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				E80E3BED1CF0C82C0085ABC3 /* PostsRequstBuilder.swift */,
+				E80E3BED1CF0C82C0085ABC3 /* PostsRequestBuilder.swift */,
 				E80E3BEF1CF0C9510085ABC3 /* UsersRequestBuilder.swift */,
 				E80E3BF11CF0C9AC0085ABC3 /* CommentsRequestBuilder.swift */,
 			);
@@ -710,7 +710,7 @@
 				E8C322661CF0C16E005E4DEF /* RequestBuilder.swift in Sources */,
 				E8C322651CF0C16E005E4DEF /* NetworkRequestInteractorsFactory.swift in Sources */,
 				E8C322431CF0BFE3005E4DEF /* Domain.h in Sources */,
-				E80E3BEE1CF0C82C0085ABC3 /* PostsRequstBuilder.swift in Sources */,
+				E80E3BEE1CF0C82C0085ABC3 /* PostsRequestBuilder.swift in Sources */,
 				E8C322801CF0C4A4005E4DEF /* NetworkingService.swift in Sources */,
 				E80E3BF61CF0CA110085ABC3 /* ArrayModelBuilder.swift in Sources */,
 				E80E3BF21CF0C9AC0085ABC3 /* CommentsRequestBuilder.swift in Sources */,
