@@ -1,0 +1,16 @@
+PODS:
+  - Just (0.4.7)
+  - SwiftyDispatch (0.3.0)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - Just
+  - SwiftyDispatch
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Just: 946bae197f898da6b49e27e10dbe9dfbf1216f29
+  SwiftyDispatch: 88fbb025c29b798d3ac839e3eed828c8c65b01cc
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+COCOAPODS: 0.39.0
