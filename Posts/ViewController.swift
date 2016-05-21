@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import Infrastructure
 
 class ViewController: UIViewController {
+    let postsInteractor = NetworkRequestInteractorsFactory.sharedFactory.getPostsInteractor()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.postsInteractor.execute { (data, error) -> () in
+            
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

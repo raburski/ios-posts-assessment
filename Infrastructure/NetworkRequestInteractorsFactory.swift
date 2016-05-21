@@ -8,27 +8,27 @@
 
 import Domain
 
-class NetworkRequestInteractorsFactory {
-    static let sharedFactory = NetworkRequestInteractorsFactory()
+public class NetworkRequestInteractorsFactory {
+    public static let sharedFactory = NetworkRequestInteractorsFactory()
     
     let networkRequestDispatcher = NetworkingService.sharedService
     
-    func getPostsInteractor() -> NetworkRequestInteractor<Any?, [PostModel]> {
+    public func getPostsInteractor() -> Interactor<Any?, [PostModel]> {
         let requestBuilder = PostsRequestBuilder()
         let modelBuilder = ArrayModelBuilder(modelBuilder: PostModelBuilder())
-        return NetworkRequestInteractor(requestBuilder: requestBuilder, modelBuilder: modelBuilder, dispatcher: self.networkRequestDispatcher)
+        return NetworkRequestWithNoInputInteractor(requestBuilder: requestBuilder, modelBuilder: modelBuilder, dispatcher: self.networkRequestDispatcher)
     }
     
-    func getUsersInteractor() -> NetworkRequestInteractor<Any?, [UserModel]> {
+    public func getUsersInteractor() -> Interactor<Any?, [UserModel]> {
         let requestBuilder = UsersRequestBuilder()
         let modelBuilder = ArrayModelBuilder(modelBuilder: UserModelBuilder())
-        return NetworkRequestInteractor(requestBuilder: requestBuilder, modelBuilder: modelBuilder, dispatcher: self.networkRequestDispatcher)
+        return NetworkRequestWithNoInputInteractor(requestBuilder: requestBuilder, modelBuilder: modelBuilder, dispatcher: self.networkRequestDispatcher)
     }
 
-    func getCommentsInteractor() -> NetworkRequestInteractor<Any?, [CommentModel]> {
+    public func getCommentsInteractor() -> Interactor<Any?, [CommentModel]> {
         let requestBuilder = CommentsRequestBuilder()
         let modelBuilder = ArrayModelBuilder(modelBuilder: CommentModelBuilder())
-        return NetworkRequestInteractor(requestBuilder: requestBuilder, modelBuilder: modelBuilder, dispatcher: self.networkRequestDispatcher)
+        return NetworkRequestWithNoInputInteractor(requestBuilder: requestBuilder, modelBuilder: modelBuilder, dispatcher: self.networkRequestDispatcher)
     }
     
 }
