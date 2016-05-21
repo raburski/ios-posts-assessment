@@ -6,7 +6,11 @@
 //  Copyright © 2016 Rzeczy. All rights reserved.
 //
 
-struct CommentModel {
+public struct CommentModel {
     let id: Int
     let postId: Int
+    public init(id: Int, postId: Int) {
+        self.id = id
+        self.postId = postId
+    }
 }
