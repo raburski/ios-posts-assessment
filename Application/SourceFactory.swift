@@ -14,7 +14,9 @@ public class SourceFactory {
     
     public func postsStore() -> Source<[PostModel]> {
         let getPostsInteractor = NetworkRequestInteractorsFactory.sharedFactory.getPostsInteractor()
-        let storage = MemoryStorage<[PostModel]>()
+        let postEncoder = PostModelDictionaryEncoder()
+        let postArrayEncoder = ArrayDictionaryEncoder<PostModel>(encoder: postEncoder)
+        let storage = UserDefaultsStorage<[PostModel]>(key: "posts", defaults: NSUserDefaults.standardUserDefaults(), encoder: postArrayEncoder)
         return ModelsStore<[PostModel]>(fetchInteractor: getPostsInteractor, storage: storage)
     }
 }

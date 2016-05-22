@@ -19,19 +19,19 @@ public class ModelsStore<Model>: Source<Model> {
     }
     
     public override func getState() -> State<Model> {
-        if !self.fetchPerformed {
-            if !self.fetchInteractor.isLoading {
-                self.fetch()
-            }
-            return .loading
+        if let data = self.storage.get() {
+            return .ready(data: data)
         }
         
         if let error = self.error {
             return .error(error: error)
         }
         
-        if let data = self.storage.get() {
-            return .ready(data: data)
+        if !self.fetchPerformed {
+            if !self.fetchInteractor.isLoading {
+                self.fetch()
+            }
+            return .loading
         }
         
         return .error(error: SourceError.NoDataReturned)
