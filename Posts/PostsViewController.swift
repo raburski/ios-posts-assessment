@@ -11,7 +11,7 @@ import Application
 import Domain
 
 class PostsViewController: UITableViewController {
-    let postsSource = SourceFactory.sharedFactory.postsStore()
+    let postsSource = SourceFactory.sharedFactory.postsSource()
     let tableViewDataSource = PostsTableViewDataSource()
     
     override func viewDidLoad() {
@@ -51,7 +51,9 @@ class PostsViewController: UITableViewController {
     // MARK: TableView Delegate
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let post = self.tableViewDataSource.postForIndexPath(indexPath)
         let detailsViewController = PostDetailsViewController()
+        detailsViewController.source = SourceFactory.sharedFactory.postDetailsSourceWithPost(post)
         self.navigationController?.pushViewController(detailsViewController, animated: true)
     }
     

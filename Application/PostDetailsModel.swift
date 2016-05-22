@@ -9,9 +9,9 @@
 public struct PostDetailsModel {
     public let title: String
     public let body: String
-    public let username: String
-    public let commentsCount: Int
-    public init(title: String, body: String, username: String, commentsCount: Int) {
+    public let username: String?
+    public let commentsCount: Int?
+    public init(title: String, body: String, username: String?, commentsCount: Int?) {
         self.title = title
         self.body = body
         self.username = username

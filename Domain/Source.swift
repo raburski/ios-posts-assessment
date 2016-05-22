@@ -24,11 +24,13 @@ public class Source<Output> {
         return self.getState()
     }
     
-    func getState() -> State<Output> {
+    public init() {}
+    
+    public func getState() -> State<Output> {
         return .error(error: RuntimeError.MissingImplementation)
     }
     
-    func subscribe(to: Subscribable) {
+    public func subscribeSelf(to: Subscribable) {
         to.subscribe(self, selector: "notifyUpdate")
     }
     

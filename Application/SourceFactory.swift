@@ -12,11 +12,18 @@ import Infrastructure
 public class SourceFactory {
     public static let sharedFactory = SourceFactory()
     
-    public func postsStore() -> Source<[PostModel]> {
-        let getPostsInteractor = NetworkRequestInteractorsFactory.sharedFactory.getPostsInteractor()
-        let postEncoder = PostModelDictionaryEncoder()
-        let postArrayEncoder = ArrayDictionaryEncoder<PostModel>(encoder: postEncoder)
-        let storage = UserDefaultsStorage<[PostModel]>(key: "posts", defaults: NSUserDefaults.standardUserDefaults(), encoder: postArrayEncoder)
-        return ModelsStore<[PostModel]>(fetchInteractor: getPostsInteractor, storage: storage)
+    var servicesProvider: ServicesProvider {
+        return ServicesProvider.sharedProvider
     }
+    
+    public func postsSource() -> Source<[PostModel]> {
+        return self.servicesProvider.postsService
+    }
+    
+    public func postDetailsSourceWithPost(post: PostModel) -> Source<PostDetailsModel> {
+        let userSource = UserWithPostSource(post: post, usersSource: self.servicesProvider.usersService)
+        let commentsSource = CommentsWithPostSource(post: post, commentsSource: self.servicesProvider.commentsService)
+        return PostDetailsSource(post: post, userSource: userSource, commentsSource: commentsSource)
+    }
+
 }

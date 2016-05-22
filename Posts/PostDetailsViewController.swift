@@ -20,6 +20,7 @@ class PostDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Details"
         self.source.subscribeAndInvoke(self, selector: "reloadData")
     }
     
@@ -34,18 +35,20 @@ class PostDetailsViewController: UIViewController {
     // MARK: Rendering
     
     func renderLoading() {
+        // Just an example of handling loading
         self.titleLabel.text = "loading..."
     }
     
     func renderError(error: ErrorType) {
+        // Just an example of handling error
         self.titleLabel.text = String(error)
     }
     
     func renderData(data: PostDetailsModel) {
         self.titleLabel.text = data.title
         self.bodyTextView.text = data.body
-        self.usernameLabel.text = data.username
-        self.commentsCountLabel.text = String(data.commentsCount)
+        self.usernameLabel.text = data.username ?? "Loading..."
+        self.commentsCountLabel.text = data.commentsCount != nil ? String(data.commentsCount!) : "Loading..."
     }
     
 }

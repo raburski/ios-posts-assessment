@@ -12,6 +12,10 @@ import Domain
 class PostsTableViewDataSource: NSObject, UITableViewDataSource {
     var posts: [PostModel] = [PostModel]()
     
+    func postForIndexPath(indexPath: NSIndexPath) -> PostModel {
+        return self.posts[indexPath.row]
+    }
+    
     @objc func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -21,7 +25,7 @@ class PostsTableViewDataSource: NSObject, UITableViewDataSource {
     }
     
     @objc func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let post = self.posts[indexPath.row]
+        let post = self.postForIndexPath(indexPath)
         
         var cell = tableView.dequeueReusableCellWithIdentifier("cell")
         if cell == nil {

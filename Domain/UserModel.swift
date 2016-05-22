@@ -7,8 +7,8 @@
 //
 
 public struct UserModel {
-    let id: Int
-    let username: String
+    public let id: Int
+    public let username: String
     public init(id: Int, username: String) {
         self.id = id
         self.username = username
