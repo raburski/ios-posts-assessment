@@ -7,10 +7,10 @@
 //
 
 public struct PostModel {
-    let id: Int
-    let userId: Int
-    let title: String
-    let body: String
+    public let id: Int
+    public let userId: Int
+    public let title: String
+    public let body: String
     public init(id: Int, userId: Int, title: String, body: String) {
         self.id = id
         self.userId = userId

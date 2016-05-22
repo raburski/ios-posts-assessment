@@ -24,4 +24,8 @@ extension Subscribable {
     public func subscribe(target: AnyObject, selector: Selector) {
         NSNotificationCenter.subscribableCenter.addObserver(target, selector: selector, name: self.updateNotificationName(), object: nil)
     }
+    public func subscribeAndInvoke(target: AnyObject, selector: Selector) {
+        self.subscribe(target, selector: selector)
+        target.performSelector(selector)
+    }
 }

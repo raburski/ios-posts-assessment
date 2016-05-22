@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PostsRequestBuilder: RequestBuilder<Any?> {
+class PostsRequestBuilder: RequestBuilder<Any> {
     override func buildWithInput(input: Any?) throws -> NetworkRequest {
         let uuid = NSUUID().UUIDString
         // URL or domain could be injectable through init
