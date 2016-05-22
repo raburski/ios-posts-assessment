@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import Infrastructure
+import Application
 import Domain
 
 class PostsViewController: UITableViewController {
-    let postsSource: Source<[PostModel]> = []
+    let postsSource = SourceFactory.sharedFactory.postsStore()
     let tableViewDataSource = PostsTableViewDataSource()
     
     override func viewDidLoad() {
@@ -21,6 +21,8 @@ class PostsViewController: UITableViewController {
     }
     
     func reloadData() {
+        self.renderLoading(false)
+        
         switch self.postsSource.state {
         case .loading: self.renderLoading(true)
         case .error(let error): self.renderError(error)
@@ -31,13 +33,13 @@ class PostsViewController: UITableViewController {
     // MARK: Rendering
     
     func renderLoading(loading: Bool) {
-        self.tableView.tableHeaderView = loading ? LoadingView() : nil
+        self.tableView.setAndLayoutTableHeaderView(loading ? LoadingView() : nil)
     }
     
     func renderError(error: ErrorType) {
         let errorView = ErrorView()
         errorView.setError(error)
-        self.tableView.tableHeaderView = errorView
+        self.tableView.setAndLayoutTableHeaderView(errorView)
     }
     
     func renderPosts(posts: [PostModel]) {
