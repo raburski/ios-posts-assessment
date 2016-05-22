@@ -48,4 +48,11 @@ class PostsViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
+    // MARK: TableView Delegate
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let detailsViewController = PostDetailsViewController()
+        self.navigationController?.pushViewController(detailsViewController, animated: true)
+    }
+    
 }

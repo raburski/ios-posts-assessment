@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostDetailsViewController" customModule="Posts" customModuleProvider="target">
+            <connections>
+                <outlet property="bodyTextView" destination="Asx-yx-1m6" id="7g2-Un-QFT"/>
+                <outlet property="commentsCountLabel" destination="i08-0c-9LV" id="to2-Vy-eT9"/>
+                <outlet property="titleLabel" destination="PwZ-X3-e6T" id="gG0-rT-AX5"/>
+                <outlet property="usernameLabel" destination="RKg-Gg-GSD" id="Cgn-yh-aUO"/>
+                <outlet property="view" destination="iN0-l3-epB" id="wtk-Y9-ez8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwZ-X3-e6T">
+                    <rect key="frame" x="8" y="82" width="584" height="21"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKg-Gg-GSD">
+                    <rect key="frame" x="8" y="107" width="584" height="18"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="comments count label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i08-0c-9LV">
+                    <rect key="frame" x="8" y="129" width="584" height="15"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Asx-yx-1m6">
+                    <rect key="frame" x="8" y="152" width="584" height="440"/>
+                    <animations/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Asx-yx-1m6" firstAttribute="top" secondItem="i08-0c-9LV" secondAttribute="bottom" constant="8" id="4JJ-2H-xyb"/>
+                <constraint firstItem="RKg-Gg-GSD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="74R-Vn-7pf"/>
+                <constraint firstItem="Asx-yx-1m6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="FnJ-0x-kep"/>
+                <constraint firstItem="PwZ-X3-e6T" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="74" id="JuQ-MK-XXA"/>
+                <constraint firstAttribute="bottom" secondItem="Asx-yx-1m6" secondAttribute="bottom" constant="8" id="TB7-Gx-gcJ"/>
+                <constraint firstAttribute="trailing" secondItem="Asx-yx-1m6" secondAttribute="trailing" constant="8" id="eXl-vF-YSr"/>
+                <constraint firstAttribute="trailing" secondItem="i08-0c-9LV" secondAttribute="trailing" constant="8" id="fQl-Ej-s5m"/>
+                <constraint firstItem="PwZ-X3-e6T" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="fd9-7y-sQs"/>
+                <constraint firstItem="PwZ-X3-e6T" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="mJB-mS-vCh"/>
+                <constraint firstAttribute="trailing" secondItem="RKg-Gg-GSD" secondAttribute="trailing" constant="8" id="nU7-Jt-cZ8"/>
+                <constraint firstItem="i08-0c-9LV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="qYw-NI-rcr"/>
+                <constraint firstItem="RKg-Gg-GSD" firstAttribute="top" secondItem="PwZ-X3-e6T" secondAttribute="bottom" constant="4" id="s4a-xi-WKy"/>
+                <constraint firstItem="i08-0c-9LV" firstAttribute="top" secondItem="RKg-Gg-GSD" secondAttribute="bottom" constant="4" id="tte-ST-wXS"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="449" y="400"/>
+        </view>
+    </objects>
+</document>
