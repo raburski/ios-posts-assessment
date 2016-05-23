@@ -18,7 +18,6 @@ class PostsViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.dataSource = self.tableViewDataSource
         self.postsSource.subscribeAndInvoke(self, selector: "reloadData")
-//        self.reloadData()
     }
     
     func reloadData() {
@@ -51,6 +50,7 @@ class PostsViewController: UITableViewController {
     // MARK: TableView Delegate
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // This behaviour should be injected via FlowController/Interactor
         let post = self.tableViewDataSource.postForIndexPath(indexPath)
         let detailsViewController = PostDetailsViewController()
         detailsViewController.source = SourceFactory.sharedFactory.postDetailsSourceWithPost(post)

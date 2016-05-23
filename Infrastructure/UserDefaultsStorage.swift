@@ -25,7 +25,7 @@ public class UserDefaultsStorage<T>: MemoryStorage<T> {
         
         if let data = self.defaults.objectForKey(self.key) as? Dictionary<String, AnyObject>,
            let object = self.encoder.decodeDictionary(data) as T? {
-            try! super.insert(object)
+            try! super.insert(object) // TODO: Potentially unsafe
             return object
         }
         

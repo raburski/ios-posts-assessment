@@ -10,7 +10,6 @@ import UIKit
 
 extension NSNotificationCenter {
     @nonobjc static let subscribableCenter = NSNotificationCenter()
-
 }
 
 public protocol Subscribable {
@@ -23,6 +22,9 @@ extension Subscribable {
     }
     public func subscribe(target: AnyObject, selector: Selector) {
         NSNotificationCenter.subscribableCenter.addObserver(target, selector: selector, name: self.updateNotificationName(), object: nil)
+    }
+    public func unsubscribe(target: AnyObject) {
+        NSNotificationCenter.subscribableCenter.removeObserver(target, name: self.updateNotificationName(), object: nil)
     }
     public func subscribeAndInvoke(target: AnyObject, selector: Selector) {
         self.subscribe(target, selector: selector)
