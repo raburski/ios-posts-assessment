@@ -919,6 +919,7 @@
 					};
 					E8C321F41CF0BFB5005E4DEF = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 74UCZG48PW;
 					};
 					E8C322081CF0BFB5005E4DEF = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -1457,11 +1458,13 @@
 			baseConfigurationReference = 90FF4EB082BF002B9D0F48A7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Marcin Raburski (8Y35CMY7CC)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Posts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rzeczy.Posts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a679f114-d9ba-410e-9199-253051dc9575";
 			};
 			name = Debug;
 		};
@@ -1470,11 +1473,13 @@
 			baseConfigurationReference = CFE637100B2199F938A153A4 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Marcin Raburski (74UCZG48PW)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Posts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rzeczy.Posts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0e64526b-c22a-4945-abef-2a1780cf78a9";
 			};
 			name = Release;
 		};
