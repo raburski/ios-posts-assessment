@@ -7,14 +7,23 @@
 //
 
 import UIKit
-import Application
 import Domain
 
-class PostsViewController: UITableViewController {
-    let postsSource = SourceFactory.sharedFactory.postsSource()
+public class PostsViewController: UITableViewController {
+    let postsSource: Source<[PostModel]>
     let tableViewDataSource = PostsTableViewDataSource()
     
-    override func viewDidLoad() {
+    public init(source: Source<[PostModel]>, nibName: String? = nil, bundle: NSBundle? = nil) {
+        self.postsSource = source
+        super.init(nibName: nibName, bundle: bundle)
+    }
+    
+    required public init?(coder decoder: NSCoder) {
+        self.postsSource = Source<[PostModel]>()
+        super.init(coder: decoder)
+    }
+
+    override public func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self.tableViewDataSource
         self.postsSource.subscribeAndInvoke(self, selector: "reloadData")
@@ -49,11 +58,11 @@ class PostsViewController: UITableViewController {
     
     // MARK: TableView Delegate
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // This behaviour should be injected via FlowController/Interactor
         let post = self.tableViewDataSource.postForIndexPath(indexPath)
         let detailsViewController = PostDetailsViewController()
-        detailsViewController.source = SourceFactory.sharedFactory.postDetailsSourceWithPost(post)
+//        detailsViewController.source = SourceFactory.sharedFactory.postDetailsSourceWithPost(post)
         self.navigationController?.pushViewController(detailsViewController, animated: true)
     }
     

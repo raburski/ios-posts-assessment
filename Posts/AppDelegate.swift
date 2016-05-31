@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Application
+import View
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let postsViewController = PostsViewController(source: SourceFactory.sharedFactory.postsSource())
+        let navigationController = UINavigationController(rootViewController: postsViewController)
+        let window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window.rootViewController = navigationController
+        window.makeKeyAndVisible()
+        self.window = window
         return true
     }
 
