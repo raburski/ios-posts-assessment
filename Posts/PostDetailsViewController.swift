@@ -6,8 +6,7 @@
 //  Copyright © 2016 Rzeczy. All rights reserved.
 //
 
-import Foundation
-import Application
+import UIKit
 import Domain
 
 class PostDetailsViewController: UIViewController {
@@ -21,7 +20,7 @@ class PostDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Details"
-        self.source.subscribeAndInvoke(self, selector: "reloadData")
+        self.source.subscribeAndInvoke(self, selector: #selector(reloadData))
     }
     
     func reloadData() {

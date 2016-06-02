@@ -27,7 +27,7 @@ class InterfaceBuilderView: UIView {
     
     func loadInterfaceBuilderView() {
         let options = [NSObject: AnyObject]()
-        if let view = NSBundle.mainBundle().loadNibNamed(String(self.dynamicType), owner: self, options: options).first as? UIView {
+        if let view = NSBundle(forClass: InterfaceBuilderView.self).loadNibNamed(String(self.dynamicType), owner: self, options: options).first as? UIView {
             self.addSubview(view)
             let widthConstraint = NSLayoutConstraint(item: self, attribute: .Width, relatedBy: .Equal, toItem: view, attribute: .Width, multiplier: 1, constant: 0)
             let heightConstraint = NSLayoutConstraint(item: self, attribute: .Height, relatedBy: .Equal, toItem: view, attribute: .Height, multiplier: 1, constant: 0)

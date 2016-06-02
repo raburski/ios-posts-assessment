@@ -7,6 +7,7 @@
 //
 
 import Domain
+import View
 
 class PostDetailsSource: Source<PostDetailsModel> {
     let post: PostModel

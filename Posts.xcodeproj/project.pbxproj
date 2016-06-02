@@ -8,82 +8,82 @@
 
 /* Begin PBXBuildFile section */
 		D63D8C2DB4C9A9C81A2085C5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 851434F9FD4A306BF38DBA9A /* Pods.framework */; };
-		E80E3BEE1CF0C82C0085ABC3 /* PostsRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BED1CF0C82C0085ABC3 /* PostsRequestBuilder.swift */; settings = {ASSET_TAGS = (); }; };
-		E80E3BF01CF0C9510085ABC3 /* UsersRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BEF1CF0C9510085ABC3 /* UsersRequestBuilder.swift */; settings = {ASSET_TAGS = (); }; };
-		E80E3BF21CF0C9AC0085ABC3 /* CommentsRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BF11CF0C9AC0085ABC3 /* CommentsRequestBuilder.swift */; settings = {ASSET_TAGS = (); }; };
-		E80E3BF61CF0CA110085ABC3 /* ArrayModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BF51CF0CA110085ABC3 /* ArrayModelBuilder.swift */; settings = {ASSET_TAGS = (); }; };
-		E80E3BF81CF0CC230085ABC3 /* PostModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BF71CF0CC230085ABC3 /* PostModelBuilder.swift */; settings = {ASSET_TAGS = (); }; };
-		E80E3BFA1CF0CDBD0085ABC3 /* UserModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BF91CF0CDBD0085ABC3 /* UserModelBuilder.swift */; settings = {ASSET_TAGS = (); }; };
-		E80E3BFC1CF0CE7A0085ABC3 /* CommentModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BFB1CF0CE7A0085ABC3 /* CommentModelBuilder.swift */; settings = {ASSET_TAGS = (); }; };
-		E80E3BFE1CF0D30D0085ABC3 /* NetworkRequestWithNoInputInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BFD1CF0D30D0085ABC3 /* NetworkRequestWithNoInputInteractor.swift */; settings = {ASSET_TAGS = (); }; };
-		E80E3C031CF205A40085ABC3 /* ModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C021CF205A40085ABC3 /* ModelStore.swift */; settings = {ASSET_TAGS = (); }; };
+		E80E3BEE1CF0C82C0085ABC3 /* PostsRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BED1CF0C82C0085ABC3 /* PostsRequestBuilder.swift */; };
+		E80E3BF01CF0C9510085ABC3 /* UsersRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BEF1CF0C9510085ABC3 /* UsersRequestBuilder.swift */; };
+		E80E3BF21CF0C9AC0085ABC3 /* CommentsRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BF11CF0C9AC0085ABC3 /* CommentsRequestBuilder.swift */; };
+		E80E3BF61CF0CA110085ABC3 /* ArrayModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BF51CF0CA110085ABC3 /* ArrayModelBuilder.swift */; };
+		E80E3BF81CF0CC230085ABC3 /* PostModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BF71CF0CC230085ABC3 /* PostModelBuilder.swift */; };
+		E80E3BFA1CF0CDBD0085ABC3 /* UserModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BF91CF0CDBD0085ABC3 /* UserModelBuilder.swift */; };
+		E80E3BFC1CF0CE7A0085ABC3 /* CommentModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BFB1CF0CE7A0085ABC3 /* CommentModelBuilder.swift */; };
+		E80E3BFE1CF0D30D0085ABC3 /* NetworkRequestWithNoInputInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3BFD1CF0D30D0085ABC3 /* NetworkRequestWithNoInputInteractor.swift */; };
+		E80E3C031CF205A40085ABC3 /* ModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C021CF205A40085ABC3 /* ModelStore.swift */; };
 		E80E3C201CF217910085ABC3 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = E80E3C1F1CF217910085ABC3 /* Application.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E80E3C271CF217910085ABC3 /* Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E80E3C1D1CF217900085ABC3 /* Application.framework */; settings = {ASSET_TAGS = (); }; };
+		E80E3C271CF217910085ABC3 /* Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E80E3C1D1CF217900085ABC3 /* Application.framework */; };
 		E80E3C2E1CF217910085ABC3 /* ApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C2D1CF217910085ABC3 /* ApplicationTests.swift */; };
 		E80E3C321CF217910085ABC3 /* Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E80E3C1D1CF217900085ABC3 /* Application.framework */; };
 		E80E3C331CF217910085ABC3 /* Application.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E80E3C1D1CF217900085ABC3 /* Application.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E80E3C3B1CF217C00085ABC3 /* SourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C3A1CF217C00085ABC3 /* SourceFactory.swift */; settings = {ASSET_TAGS = (); }; };
-		E80E3C3F1CF23C4E0085ABC3 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C3E1CF23C4E0085ABC3 /* Storage.swift */; settings = {ASSET_TAGS = (); }; };
-		E80E3C411CF23D7C0085ABC3 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C401CF23D7C0085ABC3 /* MemoryStorage.swift */; settings = {ASSET_TAGS = (); }; };
+		E80E3C3B1CF217C00085ABC3 /* SourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C3A1CF217C00085ABC3 /* SourceFactory.swift */; };
+		E80E3C3F1CF23C4E0085ABC3 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C3E1CF23C4E0085ABC3 /* Storage.swift */; };
+		E80E3C411CF23D7C0085ABC3 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C401CF23D7C0085ABC3 /* MemoryStorage.swift */; };
 		E80E3C421CF242BA0085ABC3 /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C3221D1CF0BFD7005E4DEF /* Infrastructure.framework */; };
-		E80E3C441CF2458B0085ABC3 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C431CF2458B0085ABC3 /* UserDefaultsStorage.swift */; settings = {ASSET_TAGS = (); }; };
-		E81D33A71CF25CA00061BFFE /* DictionaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D33A61CF25CA00061BFFE /* DictionaryEncoder.swift */; settings = {ASSET_TAGS = (); }; };
-		E81D33A91CF25DD60061BFFE /* PostModelDictionaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D33A81CF25DD60061BFFE /* PostModelDictionaryEncoder.swift */; settings = {ASSET_TAGS = (); }; };
-		E81D33AB1CF25E490061BFFE /* ArrayDictionaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D33AA1CF25E490061BFFE /* ArrayDictionaryEncoder.swift */; settings = {ASSET_TAGS = (); }; };
-		E85210341CF273A000A14DF1 /* UserWithPostSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85210331CF273A000A14DF1 /* UserWithPostSource.swift */; settings = {ASSET_TAGS = (); }; };
-		E85C14541CF2633000329745 /* PostDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C14531CF2633000329745 /* PostDetailsModel.swift */; settings = {ASSET_TAGS = (); }; };
-		E85C14581CF268D800329745 /* ServicesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C14571CF268D800329745 /* ServicesProvider.swift */; settings = {ASSET_TAGS = (); }; };
-		E85C145D1CF26B9C00329745 /* PostDetailsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C145C1CF26B9C00329745 /* PostDetailsSource.swift */; settings = {ASSET_TAGS = (); }; };
-		E85C14601CF26E2B00329745 /* CommentsWithPostSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C145F1CF26E2B00329745 /* CommentsWithPostSource.swift */; settings = {ASSET_TAGS = (); }; };
+		E80E3C441CF2458B0085ABC3 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C431CF2458B0085ABC3 /* UserDefaultsStorage.swift */; };
+		E81D33A71CF25CA00061BFFE /* DictionaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D33A61CF25CA00061BFFE /* DictionaryEncoder.swift */; };
+		E81D33A91CF25DD60061BFFE /* PostModelDictionaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D33A81CF25DD60061BFFE /* PostModelDictionaryEncoder.swift */; };
+		E81D33AB1CF25E490061BFFE /* ArrayDictionaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D33AA1CF25E490061BFFE /* ArrayDictionaryEncoder.swift */; };
+		E85210341CF273A000A14DF1 /* UserWithPostSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85210331CF273A000A14DF1 /* UserWithPostSource.swift */; };
+		E85C14581CF268D800329745 /* ServicesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C14571CF268D800329745 /* ServicesProvider.swift */; };
+		E85C145D1CF26B9C00329745 /* PostDetailsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C145C1CF26B9C00329745 /* PostDetailsSource.swift */; };
+		E85C14601CF26E2B00329745 /* CommentsWithPostSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C145F1CF26E2B00329745 /* CommentsWithPostSource.swift */; };
+		E8684F381D0078D400539086 /* PostDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C14531CF2633000329745 /* PostDetailsModel.swift */; };
 		E8C321F91CF0BFB5005E4DEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C321F81CF0BFB5005E4DEF /* AppDelegate.swift */; };
 		E8C322001CF0BFB5005E4DEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8C321FF1CF0BFB5005E4DEF /* Assets.xcassets */; };
 		E8C322031CF0BFB5005E4DEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8C322011CF0BFB5005E4DEF /* LaunchScreen.storyboard */; };
 		E8C3220E1CF0BFB5005E4DEF /* PostsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C3220D1CF0BFB5005E4DEF /* PostsTests.swift */; };
 		E8C322201CF0BFD7005E4DEF /* Infrastructure.h in Sources */ = {isa = PBXBuildFile; fileRef = E8C3221F1CF0BFD7005E4DEF /* Infrastructure.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E8C322271CF0BFD7005E4DEF /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C3221D1CF0BFD7005E4DEF /* Infrastructure.framework */; settings = {ASSET_TAGS = (); }; };
+		E8C322271CF0BFD7005E4DEF /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C3221D1CF0BFD7005E4DEF /* Infrastructure.framework */; };
 		E8C3222E1CF0BFD7005E4DEF /* InfrastructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C3222D1CF0BFD7005E4DEF /* InfrastructureTests.swift */; };
 		E8C322321CF0BFD7005E4DEF /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C3221D1CF0BFD7005E4DEF /* Infrastructure.framework */; };
 		E8C322331CF0BFD7005E4DEF /* Infrastructure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E8C3221D1CF0BFD7005E4DEF /* Infrastructure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E8C322431CF0BFE3005E4DEF /* Domain.h in Sources */ = {isa = PBXBuildFile; fileRef = E8C322421CF0BFE3005E4DEF /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E8C3224A1CF0BFE4005E4DEF /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C322401CF0BFE3005E4DEF /* Domain.framework */; settings = {ASSET_TAGS = (); }; };
+		E8C3224A1CF0BFE4005E4DEF /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C322401CF0BFE3005E4DEF /* Domain.framework */; };
 		E8C322511CF0BFE4005E4DEF /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C322501CF0BFE4005E4DEF /* DomainTests.swift */; };
 		E8C322551CF0BFE4005E4DEF /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C322401CF0BFE3005E4DEF /* Domain.framework */; };
 		E8C322561CF0BFE4005E4DEF /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E8C322401CF0BFE3005E4DEF /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E8C322621CF0C16E005E4DEF /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C3225D1CF0C16E005E4DEF /* NetworkRequest.swift */; settings = {ASSET_TAGS = (); }; };
-		E8C322631CF0C16E005E4DEF /* NetworkRequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C3225E1CF0C16E005E4DEF /* NetworkRequestDispatcher.swift */; settings = {ASSET_TAGS = (); }; };
-		E8C322641CF0C16E005E4DEF /* NetworkRequestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C3225F1CF0C16E005E4DEF /* NetworkRequestInteractor.swift */; settings = {ASSET_TAGS = (); }; };
-		E8C322651CF0C16E005E4DEF /* NetworkRequestInteractorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C322601CF0C16E005E4DEF /* NetworkRequestInteractorsFactory.swift */; settings = {ASSET_TAGS = (); }; };
-		E8C322661CF0C16E005E4DEF /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C322611CF0C16E005E4DEF /* RequestBuilder.swift */; settings = {ASSET_TAGS = (); }; };
+		E8C322621CF0C16E005E4DEF /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C3225D1CF0C16E005E4DEF /* NetworkRequest.swift */; };
+		E8C322631CF0C16E005E4DEF /* NetworkRequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C3225E1CF0C16E005E4DEF /* NetworkRequestDispatcher.swift */; };
+		E8C322641CF0C16E005E4DEF /* NetworkRequestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C3225F1CF0C16E005E4DEF /* NetworkRequestInteractor.swift */; };
+		E8C322651CF0C16E005E4DEF /* NetworkRequestInteractorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C322601CF0C16E005E4DEF /* NetworkRequestInteractorsFactory.swift */; };
+		E8C322661CF0C16E005E4DEF /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C322611CF0C16E005E4DEF /* RequestBuilder.swift */; };
 		E8C322681CF0C17D005E4DEF /* SwiftyDispatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C322671CF0C17D005E4DEF /* SwiftyDispatch.framework */; };
 		E8C3226A1CF0C181005E4DEF /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C322691CF0C181005E4DEF /* SwiftyJSON.framework */; };
-		E8C3226D1CF0C244005E4DEF /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C3226C1CF0C244005E4DEF /* PostModel.swift */; settings = {ASSET_TAGS = (); }; };
-		E8C3226F1CF0C24B005E4DEF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C3226E1CF0C24B005E4DEF /* UserModel.swift */; settings = {ASSET_TAGS = (); }; };
-		E8C322711CF0C254005E4DEF /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C322701CF0C254005E4DEF /* CommentModel.swift */; settings = {ASSET_TAGS = (); }; };
-		E8C322731CF0C320005E4DEF /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C322721CF0C320005E4DEF /* Builder.swift */; settings = {ASSET_TAGS = (); }; };
-		E8C322781CF0C386005E4DEF /* Declarations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C322741CF0C385005E4DEF /* Declarations.swift */; settings = {ASSET_TAGS = (); }; };
-		E8C322791CF0C386005E4DEF /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C322751CF0C386005E4DEF /* Source.swift */; settings = {ASSET_TAGS = (); }; };
-		E8C3227B1CF0C386005E4DEF /* Subscribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C322771CF0C386005E4DEF /* Subscribable.swift */; settings = {ASSET_TAGS = (); }; };
+		E8C3226D1CF0C244005E4DEF /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C3226C1CF0C244005E4DEF /* PostModel.swift */; };
+		E8C3226F1CF0C24B005E4DEF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C3226E1CF0C24B005E4DEF /* UserModel.swift */; };
+		E8C322711CF0C254005E4DEF /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C322701CF0C254005E4DEF /* CommentModel.swift */; };
+		E8C322731CF0C320005E4DEF /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C322721CF0C320005E4DEF /* Builder.swift */; };
+		E8C322781CF0C386005E4DEF /* Declarations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C322741CF0C385005E4DEF /* Declarations.swift */; };
+		E8C322791CF0C386005E4DEF /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C322751CF0C386005E4DEF /* Source.swift */; };
+		E8C3227B1CF0C386005E4DEF /* Subscribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C322771CF0C386005E4DEF /* Subscribable.swift */; };
 		E8C3227E1CF0C40A005E4DEF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C3227D1CF0C40A005E4DEF /* Pods.framework */; };
-		E8C322801CF0C4A4005E4DEF /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C3227F1CF0C4A4005E4DEF /* NetworkingService.swift */; settings = {ASSET_TAGS = (); }; };
-		E8C322821CF0C4F8005E4DEF /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C322811CF0C4F8005E4DEF /* Interactor.swift */; settings = {ASSET_TAGS = (); }; };
-		E8C322841CF0C526005E4DEF /* ModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C322831CF0C526005E4DEF /* ModelBuilder.swift */; settings = {ASSET_TAGS = (); }; };
+		E8C322801CF0C4A4005E4DEF /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C3227F1CF0C4A4005E4DEF /* NetworkingService.swift */; };
+		E8C322821CF0C4F8005E4DEF /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C322811CF0C4F8005E4DEF /* Interactor.swift */; };
+		E8C322841CF0C526005E4DEF /* ModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C322831CF0C526005E4DEF /* ModelBuilder.swift */; };
 		E8C322861CF0C557005E4DEF /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C322401CF0BFE3005E4DEF /* Domain.framework */; };
 		E8DDF6C21CFE0D6300B34251 /* View.h in Sources */ = {isa = PBXBuildFile; fileRef = E8DDF6C11CFE0D6300B34251 /* View.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E8DDF6C91CFE0D6300B34251 /* View.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DDF6BF1CFE0D6300B34251 /* View.framework */; settings = {ASSET_TAGS = (); }; };
+		E8DDF6C91CFE0D6300B34251 /* View.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DDF6BF1CFE0D6300B34251 /* View.framework */; };
 		E8DDF6D01CFE0D6300B34251 /* ViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DDF6CF1CFE0D6300B34251 /* ViewTests.swift */; };
 		E8DDF6D41CFE0D6300B34251 /* View.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DDF6BF1CFE0D6300B34251 /* View.framework */; };
 		E8DDF6D51CFE0D6300B34251 /* View.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E8DDF6BF1CFE0D6300B34251 /* View.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E8DDF6DC1CFE0DAA00B34251 /* InterfaceBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C0C1CF211DB0085ABC3 /* InterfaceBuilderView.swift */; settings = {ASSET_TAGS = (); }; };
-		E8DDF6DD1CFE0DAA00B34251 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C0A1CF211DB0085ABC3 /* ErrorView.swift */; settings = {ASSET_TAGS = (); }; };
-		E8DDF6DE1CFE0DAA00B34251 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E80E3C0B1CF211DB0085ABC3 /* ErrorView.xib */; settings = {ASSET_TAGS = (); }; };
-		E8DDF6DF1CFE0DAA00B34251 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C0D1CF211DB0085ABC3 /* LoadingView.swift */; settings = {ASSET_TAGS = (); }; };
-		E8DDF6E01CFE0DAA00B34251 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E80E3C0E1CF211DB0085ABC3 /* LoadingView.xib */; settings = {ASSET_TAGS = (); }; };
-		E8DDF6E61CFE0DDF00B34251 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C041CF210290085ABC3 /* PostsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		E8DDF6E71CFE0DDF00B34251 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C14511CF262EF00329745 /* PostDetailsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		E8DDF6E81CFE0DDF00B34251 /* PostDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E85C14551CF265F900329745 /* PostDetailsViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		E8DDF6EA1CFE0F3200B34251 /* PostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8DDF6E91CFE0F3200B34251 /* PostsViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		E8DDF6EB1CFE102000B34251 /* PostsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C161CF213FE0085ABC3 /* PostsTableViewDataSource.swift */; settings = {ASSET_TAGS = (); }; };
-		E8DDF6EC1CFE108100B34251 /* TableViewHeaderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C3C1CF21A5F0085ABC3 /* TableViewHeaderExtension.swift */; settings = {ASSET_TAGS = (); }; };
+		E8DDF6DC1CFE0DAA00B34251 /* InterfaceBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C0C1CF211DB0085ABC3 /* InterfaceBuilderView.swift */; };
+		E8DDF6DD1CFE0DAA00B34251 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C0A1CF211DB0085ABC3 /* ErrorView.swift */; };
+		E8DDF6DE1CFE0DAA00B34251 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E80E3C0B1CF211DB0085ABC3 /* ErrorView.xib */; };
+		E8DDF6DF1CFE0DAA00B34251 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C0D1CF211DB0085ABC3 /* LoadingView.swift */; };
+		E8DDF6E01CFE0DAA00B34251 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E80E3C0E1CF211DB0085ABC3 /* LoadingView.xib */; };
+		E8DDF6E61CFE0DDF00B34251 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C041CF210290085ABC3 /* PostsViewController.swift */; };
+		E8DDF6E71CFE0DDF00B34251 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C14511CF262EF00329745 /* PostDetailsViewController.swift */; };
+		E8DDF6E81CFE0DDF00B34251 /* PostDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E85C14551CF265F900329745 /* PostDetailsViewController.xib */; };
+		E8DDF6EA1CFE0F3200B34251 /* PostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8DDF6E91CFE0F3200B34251 /* PostsViewController.xib */; };
+		E8DDF6EB1CFE102000B34251 /* PostsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C161CF213FE0085ABC3 /* PostsTableViewDataSource.swift */; };
+		E8DDF6EC1CFE108100B34251 /* TableViewHeaderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C3C1CF21A5F0085ABC3 /* TableViewHeaderExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -233,7 +233,7 @@
 		E81D33AA1CF25E490061BFFE /* ArrayDictionaryEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayDictionaryEncoder.swift; sourceTree = "<group>"; };
 		E85210331CF273A000A14DF1 /* UserWithPostSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserWithPostSource.swift; sourceTree = "<group>"; };
 		E85C14511CF262EF00329745 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
-		E85C14531CF2633000329745 /* PostDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsModel.swift; sourceTree = "<group>"; };
+		E85C14531CF2633000329745 /* PostDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostDetailsModel.swift; path = ../Application/PostDetailsModel.swift; sourceTree = "<group>"; };
 		E85C14551CF265F900329745 /* PostDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostDetailsViewController.xib; sourceTree = "<group>"; };
 		E85C14571CF268D800329745 /* ServicesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesProvider.swift; sourceTree = "<group>"; };
 		E85C145C1CF26B9C00329745 /* PostDetailsSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsSource.swift; sourceTree = "<group>"; };
@@ -435,6 +435,7 @@
 				E8DDF6E91CFE0F3200B34251 /* PostsViewController.xib */,
 				E85C14511CF262EF00329745 /* PostDetailsViewController.swift */,
 				E85C14551CF265F900329745 /* PostDetailsViewController.xib */,
+				E85C14531CF2633000329745 /* PostDetailsModel.swift */,
 			);
 			name = ViewControllers;
 			path = ../Posts;
@@ -486,7 +487,6 @@
 		E85C145A1CF26A0000329745 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E85C14531CF2633000329745 /* PostDetailsModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -1107,7 +1107,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E85C14541CF2633000329745 /* PostDetailsModel.swift in Sources */,
 				E85C14581CF268D800329745 /* ServicesProvider.swift in Sources */,
 				E80E3C3B1CF217C00085ABC3 /* SourceFactory.swift in Sources */,
 				E85C145D1CF26B9C00329745 /* PostDetailsSource.swift in Sources */,
@@ -1211,6 +1210,7 @@
 				E8DDF6EC1CFE108100B34251 /* TableViewHeaderExtension.swift in Sources */,
 				E8DDF6DF1CFE0DAA00B34251 /* LoadingView.swift in Sources */,
 				E8DDF6DD1CFE0DAA00B34251 /* ErrorView.swift in Sources */,
+				E8684F381D0078D400539086 /* PostDetailsModel.swift in Sources */,
 				E8DDF6E71CFE0DDF00B34251 /* PostDetailsViewController.swift in Sources */,
 				E8DDF6C21CFE0D6300B34251 /* View.h in Sources */,
 				E8DDF6E61CFE0DDF00B34251 /* PostsViewController.swift in Sources */,
@@ -1795,6 +1795,7 @@
 				E8DDF6D71CFE0D6300B34251 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8DDF6DB1CFE0D6300B34251 /* Build configuration list for PBXNativeTarget "ViewTests" */ = {
 			isa = XCConfigurationList;
@@ -1803,6 +1804,7 @@
 				E8DDF6D91CFE0D6300B34251 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -26,7 +26,7 @@ public class PostsViewController: UITableViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self.tableViewDataSource
-        self.postsSource.subscribeAndInvoke(self, selector: "reloadData")
+        self.postsSource.subscribeAndInvoke(self, selector: #selector(reloadData))
     }
     
     func reloadData() {

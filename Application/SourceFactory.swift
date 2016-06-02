@@ -8,6 +8,7 @@
 
 import Domain
 import Infrastructure
+import View
 
 public class SourceFactory {
     public static let sharedFactory = SourceFactory()
