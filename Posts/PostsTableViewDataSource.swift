@@ -32,6 +32,7 @@ class PostsTableViewDataSource: NSObject, UITableViewDataSource {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
         }
         cell?.textLabel?.text = post.title
+        cell?.accessibilityLabel = post.title
         return cell!
     }
 }
