@@ -65,7 +65,7 @@ public class PostsViewController: TableViewController<PostsViewModel> {
     // MARK: TableView Delegate
     
     override public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        self.input.showDetail.input = self.tableViewDataSource.postForIndexPath(indexPath)
+        self.input.showDetail.input = self.tableViewDataSource.postForIndexPath(indexPath)
         self.input.showDetail.execute()
 //        let post = self.tableViewDataSource.postForIndexPath(indexPath)
 //        let detailsViewController = PostDetailsViewController()
