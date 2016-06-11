@@ -18,7 +18,7 @@ public class Interactor<Input, Output> {
     
     public init() {}
     
-    public func execute(callback: (data: Output?, error: ErrorType?) -> ()) {
+    public func execute(callback: (data: Output?, error: ErrorType?) -> () = { (data, error) -> () in return }) {
         callback(data: nil, error: RuntimeError.MissingImplementation)
     }
     

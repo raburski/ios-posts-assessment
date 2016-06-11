@@ -10,7 +10,7 @@ import UIKit
 import Domain
 
 class PostDetailsViewController: UIViewController {
-    var source: Source<PostDetailsModel>!
+    var source: StateSource<PostDetailsModel>!
     
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var bodyTextView: UITextView!

@@ -6,7 +6,7 @@
 //  Copyright © 2016 Rzeczy. All rights reserved.
 //
 
-public class ModelsStore<Model>: Source<Model> {
+public class ModelsStore<Model>: StateSource<Model> {
     internal let fetchInteractor: Interactor<Any, Model>
     internal let storage: Storage<Model>
     

@@ -7,25 +7,24 @@
 //
 
 import UIKit
+import Domain
 import Application
 import View
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-    
-        let postsViewController = PostsViewController(source: SourceFactory.sharedFactory.postsSource(), nibName: nil, bundle: NSBundle(forClass: PostsViewController.classForCoder()))
-        let navigationController = UINavigationController(rootViewController: postsViewController)
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let postsViewModel = PostsViewModel(posts: SourceFactory.sharedFactory.postsSource(), showDetail: Interactor<PostModel, Any>())
+        let postsViewController = PostsViewController(input: postsViewModel)
+        let navigationController = UINavigationController(rootViewController: postsViewController)
         
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window
+            
         return true
     }
 

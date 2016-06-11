@@ -6,7 +6,7 @@
 //  Copyright © 2016 Marcin Rabursky. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public enum SourceError: ErrorType {
     case Inconsistency
@@ -20,18 +20,21 @@ public enum State<T> {
 }
 
 public class Source<Output> {
-    public var state: State<Output> {
+    public var state: Output {
         return self.getState()
     }
     
-    public init() {}
+    private var internalState: Output?
+    public init(state: Output? = nil) {
+        self.internalState = state
+    }
     
-    public func getState() -> State<Output> {
-        return .error(error: RuntimeError.MissingImplementation)
+    public func getState() -> Output {
+        return self.internalState!
     }
     
     public func subscribeSelf(to: Subscribable) {
-        to.subscribe(self, selector: "notifyUpdate")
+        to.subscribe(self, selector: #selector(notifyUpdate))
     }
     
     @objc func notifyUpdate() {
@@ -42,6 +45,16 @@ public class Source<Output> {
 extension Source: Subscribable {
     public func updateNotificationName() -> String {
         return String(ObjectIdentifier(self).uintValue)
+    }
+}
+
+public class StateSource<Output>: Source<State<Output>> {
+    public init() {
+        super.init(state: nil)
+    }
+    
+    public override func getState() -> State<Output> {
+        return .error(error: RuntimeError.MissingImplementation)
     }
 }
 

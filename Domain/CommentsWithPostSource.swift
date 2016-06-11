@@ -7,10 +7,10 @@
 //
 
 
-public class CommentsWithPostSource: Source<[CommentModel]> {
+public class CommentsWithPostSource: StateSource<[CommentModel]> {
     let post: PostModel
-    let commentsSource: Source<[CommentModel]>
-    public init(post: PostModel, commentsSource: Source<[CommentModel]>) {
+    let commentsSource: StateSource<[CommentModel]>
+    public init(post: PostModel, commentsSource: StateSource<[CommentModel]>) {
         self.post = post
         self.commentsSource = commentsSource
         super.init()

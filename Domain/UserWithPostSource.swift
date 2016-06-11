@@ -6,10 +6,10 @@
 //  Copyright © 2016 Rzeczy. All rights reserved.
 //
 
-public class UserWithPostSource: Source<UserModel> {
+public class UserWithPostSource: StateSource<UserModel> {
     let post: PostModel
-    let usersSource: Source<[UserModel]>
-    public init(post: PostModel, usersSource: Source<[UserModel]>) {
+    let usersSource: StateSource<[UserModel]>
+    public init(post: PostModel, usersSource: StateSource<[UserModel]>) {
         self.post = post
         self.usersSource = usersSource
         super.init()

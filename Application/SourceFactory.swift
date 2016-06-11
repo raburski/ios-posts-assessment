@@ -7,6 +7,7 @@
 //
 
 import Domain
+import Application
 import Infrastructure
 import View
 
@@ -17,14 +18,14 @@ public class SourceFactory {
         return ServicesProvider.sharedProvider
     }
     
-    public func postsSource() -> Source<[PostModel]> {
+    public func postsSource() -> StateSource<[PostModel]> {
         return self.servicesProvider.postsService
     }
     
-    public func postDetailsSourceWithPost(post: PostModel) -> Source<PostDetailsModel> {
-        let userSource = UserWithPostSource(post: post, usersSource: self.servicesProvider.usersService)
-        let commentsSource = CommentsWithPostSource(post: post, commentsSource: self.servicesProvider.commentsService)
-        return PostDetailsSource(post: post, userSource: userSource, commentsSource: commentsSource)
-    }
+//    public func postDetailsSourceWithPost(post: PostModel) -> Source<PostDetailsModel> {
+//        let userSource = UserWithPostSource(post: post, usersSource: self.servicesProvider.usersService)
+//        let commentsSource = CommentsWithPostSource(post: post, commentsSource: self.servicesProvider.commentsService)
+//        return PostDetailsSource(post: post, userSource: userSource, commentsSource: commentsSource)
+//    }
 
 }

@@ -18,3 +18,9 @@ public struct PostModel {
         self.body = body
     }
 }
+
+extension PostModel: Equatable {}
+
+public func ==(rhs: PostModel, lhs: PostModel) -> Bool {
+    return rhs.id == lhs.id
+}

@@ -8,6 +8,7 @@
 
 import Domain
 import Infrastructure
+import UIKit
 
 public class ServicesProvider {
     public static let sharedProvider = ServicesProvider()

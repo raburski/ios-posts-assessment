@@ -7,32 +7,38 @@
 //
 
 import UIKit
+import Application
 import Domain
 
-public class PostsViewController: UITableViewController {
-    let postsSource: Source<[PostModel]>
+extension PostsViewModel {
+    var title: String {
+        switch self.posts.state {
+        case .loading: return "Loading Posts..."
+        case .error: return "Error!"
+        case .ready(let posts): return "Posts (\(posts.count))"
+        }
+    }
+}
+
+public class PostsViewController: TableViewController<PostsViewModel> {
     let tableViewDataSource = PostsTableViewDataSource()
     
-    public init(source: Source<[PostModel]>, nibName: String? = nil, bundle: NSBundle? = nil) {
-        self.postsSource = source
-        super.init(nibName: nibName, bundle: bundle)
-    }
-    
-    required public init?(coder decoder: NSCoder) {
-        self.postsSource = Source<[PostModel]>()
-        super.init(coder: decoder)
+    override public init(input: PostsViewModel, nibName: String? = nil, bundle: NSBundle? = nil) {
+        super.init(input: input, nibName: nibName, bundle: bundle)
     }
 
     override public func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self.tableViewDataSource
-        self.postsSource.subscribeAndInvoke(self, selector: #selector(reloadData))
+        self.input.posts.subscribeAndInvoke(self, selector: #selector(reloadData))
+        
     }
     
     func reloadData() {
+        self.title = self.input.title
         self.renderLoading(false)
         
-        switch self.postsSource.state {
+        switch self.input.posts.state {
         case .loading: self.renderLoading(true)
         case .error(let error): self.renderError(error)
         case .ready(let data): self.renderPosts(data)
@@ -59,11 +65,12 @@ public class PostsViewController: UITableViewController {
     // MARK: TableView Delegate
     
     override public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // This behaviour should be injected via FlowController/Interactor
-        let post = self.tableViewDataSource.postForIndexPath(indexPath)
-        let detailsViewController = PostDetailsViewController()
+//        self.input.showDetail.input = self.tableViewDataSource.postForIndexPath(indexPath)
+        self.input.showDetail.execute()
+//        let post = self.tableViewDataSource.postForIndexPath(indexPath)
+//        let detailsViewController = PostDetailsViewController()
 //        detailsViewController.source = SourceFactory.sharedFactory.postDetailsSourceWithPost(post)
-        self.navigationController?.pushViewController(detailsViewController, animated: true)
+//        self.navigationController?.pushViewController(detailsViewController, animated: true)
     }
     
 }

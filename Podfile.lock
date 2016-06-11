@@ -1,15 +1,20 @@
 PODS:
   - Just (0.4.7)
+  - KIF (3.4.2):
+    - KIF/Core (= 3.4.2)
+  - KIF/Core (3.4.2)
   - SwiftyDispatch (0.3.0)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Just
+  - KIF (~> 3.0)
   - SwiftyDispatch
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Just: 946bae197f898da6b49e27e10dbe9dfbf1216f29
+  KIF: b518c9831453abea5afdbbde3908ec47832d6d56
   SwiftyDispatch: 88fbb025c29b798d3ac839e3eed828c8c65b01cc
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
