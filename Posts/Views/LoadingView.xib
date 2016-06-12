@@ -20,6 +20,9 @@
                     <rect key="frame" x="111" y="33" width="20" height="20"/>
                 </activityIndicatorView>
             </subviews>
+            <accessibility key="accessibilityConfiguration" label="Loading">
+                <bool key="isElement" value="YES"/>
+            </accessibility>
             <constraints>
                 <constraint firstItem="ark-lJ-Cio" firstAttribute="leading" secondItem="JcC-yV-UrO" secondAttribute="trailing" constant="12" id="Jfj-EE-G5U"/>
                 <constraint firstItem="ark-lJ-Cio" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="12" id="uTR-AS-AbM"/>

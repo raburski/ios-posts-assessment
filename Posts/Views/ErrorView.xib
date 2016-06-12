@@ -23,6 +23,9 @@
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <accessibility key="accessibilityConfiguration" label="Error">
+                <bool key="isElement" value="YES"/>
+            </accessibility>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="DjP-PX-Wcs" secondAttribute="bottom" constant="40" id="3pK-JS-19U"/>
                 <constraint firstItem="DjP-PX-Wcs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Iok-En-qVo"/>

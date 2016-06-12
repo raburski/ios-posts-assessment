@@ -11,7 +11,9 @@ import UIKit
 import View
 import KIF
 
-let UITestArgument = "UITestArgument"
+enum TestError: ErrorType {
+    case Error
+}
 
 class ViewTests: XCTestCase {
     func setUpNavigationController(rootViewController: UIViewController) {

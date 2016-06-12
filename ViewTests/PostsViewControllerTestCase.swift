@@ -32,6 +32,22 @@ class PostsViewControllerTestCase: ViewTests {
         }))
     }
     
+    func testRendersLoading() {
+        let postsSource = Source<State<[PostModel]>>(state: State.loading)
+        let viewModel = PostsViewModel(posts: postsSource, showDetail: Interactor<PostModel, Any>())
+        self.setUpWithViewModel(viewModel)
+        
+        self.tester().waitForViewWithAccessibilityLabel("Loading")
+    }
+    
+    func testRendersError() {
+        let postsSource = Source<State<[PostModel]>>(state: State.error(error: TestError.Error))
+        let viewModel = PostsViewModel(posts: postsSource, showDetail: Interactor<PostModel, Any>())
+        self.setUpWithViewModel(viewModel)
+        
+        self.tester().waitForViewWithAccessibilityLabel("Error")
+    }
+    
     func testInvokesShowDetail() {
         let showDetails = ExpectationInteractor<PostModel, Any>(expectation: self.expectationWithDescription("Interactor"))
         let postsSource = Source(state: State.ready(data: self.posts))
@@ -39,7 +55,11 @@ class PostsViewControllerTestCase: ViewTests {
         self.setUpWithViewModel(viewModel)
         self.tester().tapViewWithAccessibilityLabel(self.posts.first!.title)
         
-        XCTAssertEqual(showDetails.input!, self.posts.first!)
+        if let input = showDetails.input, let post = self.posts.first {
+            XCTAssertEqual(input, post)
+        } else {
+            XCTFail("PostModel missing in showDetails")
+        }
         
         self.waitForExpectationsWithTimeout(10, handler: nil)
     }
