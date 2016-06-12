@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        BuddyBuildSDK.setup()
+        
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
         let postsViewModel = PostsViewModel(posts: SourceFactory.sharedFactory.postsSource(), showDetail: Interactor<PostModel, Any>())
         let postsViewController = PostsViewController(input: postsViewModel)

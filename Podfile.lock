@@ -1,4 +1,5 @@
 PODS:
+  - BuddyBuildSDK (1.0.7)
   - Just (0.4.7)
   - KIF (3.4.2):
     - KIF/Core (= 3.4.2)
@@ -7,12 +8,14 @@ PODS:
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
+  - BuddyBuildSDK
   - Just
   - KIF (~> 3.0)
   - SwiftyDispatch
   - SwiftyJSON
 
 SPEC CHECKSUMS:
+  BuddyBuildSDK: c74a4e731b012368e336725d3221b8b934707171
   Just: 946bae197f898da6b49e27e10dbe9dfbf1216f29
   KIF: b518c9831453abea5afdbbde3908ec47832d6d56
   SwiftyDispatch: 88fbb025c29b798d3ac839e3eed828c8c65b01cc

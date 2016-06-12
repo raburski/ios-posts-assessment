@@ -259,6 +259,8 @@
 		E86B82081D0CB0C2005AF686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8769E8E1D0990960039A48B /* ViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewTests.swift; path = ../ViewTests/ViewTests.swift; sourceTree = "<group>"; };
 		E8769E961D0993050039A48B /* PostsViewControllerTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostsViewControllerTestCase.swift; path = ../ViewTests/PostsViewControllerTestCase.swift; sourceTree = "<group>"; };
+		E8B170771D0DF79C00776B23 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BuddyBuildSDK.framework; path = Pods/BuddyBuildSDK/BuddyBuildSDK.framework; sourceTree = "<group>"; };
+		E8B1707B1D0DF84E00776B23 /* Posts-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Posts-Bridging-Header.h"; sourceTree = "<group>"; };
 		E8C321F51CF0BFB5005E4DEF /* Posts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C321F81CF0BFB5005E4DEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8C321FF1CF0BFB5005E4DEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -595,6 +597,7 @@
 				E80E3C3A1CF217C00085ABC3 /* SourceFactory.swift */,
 				E85C14571CF268D800329745 /* ServicesProvider.swift */,
 				E8C322041CF0BFB5005E4DEF /* Info.plist */,
+				E8B1707B1D0DF84E00776B23 /* Posts-Bridging-Header.h */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -703,6 +706,7 @@
 		FE91449561FB429EE22954B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E8B170771D0DF79C00776B23 /* BuddyBuildSDK.framework */,
 				E815E05C1D0CB76E00E323BA /* KIF.framework */,
 				E8C3227D1CF0C40A005E4DEF /* Pods.framework */,
 				E8C322691CF0C181005E4DEF /* SwiftyJSON.framework */,
@@ -1587,13 +1591,20 @@
 			baseConfigurationReference = 90FF4EB082BF002B9D0F48A7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Marcin Raburski (8Y35CMY7CC)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/BuddyBuildSDK",
+				);
 				INFOPLIST_FILE = Posts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rzeczy.Posts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a679f114-d9ba-410e-9199-253051dc9575";
+				SWIFT_OBJC_BRIDGING_HEADER = "Posts/Posts-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1602,13 +1613,19 @@
 			baseConfigurationReference = CFE637100B2199F938A153A4 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Marcin Raburski (74UCZG48PW)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/BuddyBuildSDK",
+				);
 				INFOPLIST_FILE = Posts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rzeczy.Posts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "0e64526b-c22a-4945-abef-2a1780cf78a9";
+				SWIFT_OBJC_BRIDGING_HEADER = "Posts/Posts-Bridging-Header.h";
 			};
 			name = Release;
 		};
