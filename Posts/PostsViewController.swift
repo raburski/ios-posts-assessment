@@ -10,7 +10,7 @@ import UIKit
 import Application
 import Domain
 
-extension PostsViewModel {
+extension PostsListModel {
     var title: String {
         switch self.posts.state {
         case .loading: return "Loading Posts..."
@@ -20,10 +20,10 @@ extension PostsViewModel {
     }
 }
 
-public class PostsViewController: TableViewController<PostsViewModel> {
+public class PostsViewController: TableViewController<PostsListModel> {
     let tableViewDataSource = PostsTableViewDataSource()
     
-    override public init(input: PostsViewModel, nibName: String? = nil, bundle: NSBundle? = nil) {
+    override public init(input: PostsListModel, nibName: String? = nil, bundle: NSBundle? = nil) {
         super.init(input: input, nibName: nibName, bundle: bundle)
     }
 
@@ -65,8 +65,8 @@ public class PostsViewController: TableViewController<PostsViewModel> {
     // MARK: TableView Delegate
     
     override public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.input.showDetail.input = self.tableViewDataSource.postForIndexPath(indexPath)
-        self.input.showDetail.execute()
+        self.input.select.input = self.tableViewDataSource.postForIndexPath(indexPath)
+        self.input.select.execute()
 //        let post = self.tableViewDataSource.postForIndexPath(indexPath)
 //        let detailsViewController = PostDetailsViewController()
 //        detailsViewController.source = SourceFactory.sharedFactory.postDetailsSourceWithPost(post)

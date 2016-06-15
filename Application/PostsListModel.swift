@@ -9,11 +9,11 @@
 import Foundation
 import Domain
 
-public struct PostsViewModel {
+public struct PostsListModel {
     public let posts: Source<State<[PostModel]>>
-    public let showDetail: Interactor<PostModel, Any>
-    public init(posts: Source<State<[PostModel]>>, showDetail: Interactor<PostModel, Any>) {
+    public let select: Interactor<PostModel, Any>
+    public init(posts: Source<State<[PostModel]>>, select: Interactor<PostModel, Any>) {
         self.posts = posts
-        self.showDetail = showDetail
+        self.select = select
     }
 }

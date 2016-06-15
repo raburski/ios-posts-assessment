@@ -11,7 +11,7 @@ import Domain
 import Application
 import UIKit
 
-public class PostsViewBuilder: ViewBuilder<PostsViewModel, UIViewController> {
+public class PostsViewBuilder: ViewBuilder<PostsListModel, UIViewController> {
     override public init() {
         super.init()
     }

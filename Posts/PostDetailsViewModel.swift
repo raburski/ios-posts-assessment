@@ -22,6 +22,6 @@ public struct PostDetailsViewModel {
     }
     
 //    convenience init(model: PostDetailsModel) {
-//        self.init(title: model.post.title, body: model.post.body, username: model.user.username, commentsCount: )
+//        self.init(title: model.post.title, body: model.post.body, username: model.user.username, commentsCount: model.comments.count)
 //    }
 }

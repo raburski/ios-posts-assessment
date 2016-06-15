@@ -9,11 +9,11 @@
 import Domain
 
 public class PostsFlow: Flow<Any, Any> {
-    let presenter: Presenter<PostsViewModel>
+    let presenter: Presenter<PostsListModel>
     
-    public init(postsSource: StateSource<[PostModel]>, detailsFlow: Flow<PostModel, Any>, presenter: Presenter<PostsViewModel>) {
+    public init(postsSource: StateSource<[PostModel]>, detailsFlow: Flow<PostModel, Any>, presenter: Presenter<PostsListModel>) {
         self.presenter = presenter
-        self.presenter.input = PostsViewModel(posts: postsSource, showDetail: detailsFlow)
+        self.presenter.input = PostsListModel(posts: postsSource, select: detailsFlow)
     }
     
     public override func present(animated: Bool, callback: (data: Any?, error: ErrorType?) -> () = { (data, error) in return }) {
