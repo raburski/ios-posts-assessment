@@ -10,8 +10,8 @@ import Domain
 import SwiftyJSON
 
 class UserModelBuilder: ModelBuilder<UserModel> {
-    override func buildWithInput(input: JSON) throws -> UserModel {
-        guard let id = input["id"].int, let username = input["username"].string else {
+    override func build() throws -> UserModel {
+        guard let input = self.input, let id = input["id"].int, let username = input["username"].string else {
             throw BuilderError.CouldNotParse
         }
         

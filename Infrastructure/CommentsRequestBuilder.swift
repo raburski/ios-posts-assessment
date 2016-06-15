@@ -9,7 +9,7 @@
 import Foundation
 
 class CommentsRequestBuilder: RequestBuilder<Any> {
-    override func buildWithInput(input: Any?) throws -> NetworkRequest {
+    override func build() throws -> NetworkRequest {
         let uuid = NSUUID().UUIDString
         // URL or domain could be injectable through init
         let request = NSURLRequest(URL: NSURL(string: "http://jsonplaceholder.typicode.com/comments")!)

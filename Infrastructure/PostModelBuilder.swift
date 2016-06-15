@@ -10,8 +10,9 @@ import Domain
 import SwiftyJSON
 
 class PostModelBuilder: ModelBuilder<PostModel> {
-    override func buildWithInput(input: JSON) throws -> PostModel {
+    override func build() throws -> PostModel {
         guard
+            let input = self.input,
             let id = input["id"].int,
             let userId = input["userId"].int,
             let title = input["title"].string,

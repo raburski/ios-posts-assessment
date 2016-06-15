@@ -11,8 +11,9 @@ public enum BuilderError: ErrorType {
 }
 
 public class Builder<Input, Output> {
+    public var input: Input?
     public init() {}
-    public func buildWithInput(input: Input) throws -> Output {
+    public func build() throws -> Output {
         throw RuntimeError.MissingImplementation
     }
 }

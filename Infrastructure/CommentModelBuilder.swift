@@ -10,8 +10,8 @@ import Domain
 import SwiftyJSON
 
 class CommentModelBuilder: ModelBuilder<CommentModel> {
-    override func buildWithInput(input: JSON) throws -> CommentModel {
-        guard let id = input["id"].int, let postId = input["postId"].int else {
+    override func build() throws -> CommentModel {
+        guard let input = self.input, let id = input["id"].int, let postId = input["postId"].int else {
             throw BuilderError.CouldNotParse
         }
         

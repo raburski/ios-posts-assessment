@@ -32,7 +32,8 @@ class NetworkRequestInteractor<Input, Output>: Interactor<Input, Output> {
         }
         
         do {
-            let request = try self.requestBuilder.buildWithInput(input)
+            self.requestBuilder.input = input
+            let request = try self.requestBuilder.build()
             self.request = request
             self.dispatchRequest(request, callback: callback)
         } catch let error {
@@ -46,7 +47,8 @@ class NetworkRequestInteractor<Input, Output>: Interactor<Input, Output> {
             self.request = nil
             do {
                 if let json = json {
-                    let model = try self.modelBuilder.buildWithInput(json)
+                    self.modelBuilder.input = json
+                    let model = try self.modelBuilder.build()
                     callback(data: model, error: error)
                 } else {
                     callback(data: nil, error: error)

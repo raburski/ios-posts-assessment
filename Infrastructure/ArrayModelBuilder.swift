@@ -17,13 +17,14 @@ class ArrayModelBuilder<Output>: ModelBuilder<[Output]> {
         super.init()
     }
     
-    override func buildWithInput(input: JSON) throws -> [Output] {
-        guard let array = input.array else {
+    override func build() throws -> [Output] {
+        guard let array = self.input?.array else {
             throw BuilderError.CouldNotParse
         }
         
         return try array.map({ (json) -> Output in
-            return try self.modelBuilder.buildWithInput(json)
+            self.modelBuilder.input = json
+            return try self.modelBuilder.build()
         })
     }
 }
