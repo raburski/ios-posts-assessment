@@ -6,15 +6,15 @@
 //  Copyright © 2016 Rzeczy. All rights reserved.
 //
 
+import Domain
+
 public struct PostDetailsModel {
-    public let title: String
-    public let body: String
-    public let username: String?
-    public let commentsCount: Int?
-    public init(title: String, body: String, username: String?, commentsCount: Int?) {
-        self.title = title
-        self.body = body
-        self.username = username
-        self.commentsCount = commentsCount
+    public let post: PostModel
+    public let user: UserModel
+    public let comments: [CommentModel]
+    public init(post: PostModel, user: UserModel, comments: [CommentModel]) {
+        self.post = post
+        self.user = user
+        self.comments = comments
     }
 }

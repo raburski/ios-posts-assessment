@@ -14,18 +14,22 @@ import View
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    var appFlow: Flow<Any, Any>!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         BuddyBuildSDK.setup()
         
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let postsViewModel = PostsViewModel(posts: SourceFactory.sharedFactory.postsSource(), showDetail: Interactor<PostModel, Any>())
-        let postsViewController = PostsViewController(input: postsViewModel)
-        let navigationController = UINavigationController(rootViewController: postsViewController)
+        let navigationController = UINavigationController()
         
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window
+
+        let presenter = ViewPresenter(builder: PostsViewBuilder(), transition: PushTransition(viewControllerSource: Source<UINavigationController?>(state: navigationController)))
+        
+        self.appFlow = PostsFlow(postsSource: SourceFactory.sharedFactory.postsSource(), detailsFlow: Flow<PostModel, Any>(), presenter: presenter)
+        self.appFlow.present()
             
         return true
     }

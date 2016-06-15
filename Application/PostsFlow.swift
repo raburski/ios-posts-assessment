@@ -8,22 +8,19 @@
 
 import Domain
 
-public class PostsListFlow: Flow<Any, Any> {
-    let postsSource: StateSource<[PostModel]>
-    let detailsFlow: Flow<PostModel, Any>
+public class PostsFlow: Flow<Any, Any> {
+    let presenter: Presenter<PostsViewModel>
     
-    var postsViewModel: PostsViewModel {
-        return PostsViewModel(posts: self.postsSource, showDetail: self.detailsFlow)
+    public init(postsSource: StateSource<[PostModel]>, detailsFlow: Flow<PostModel, Any>, presenter: Presenter<PostsViewModel>) {
+        self.presenter = presenter
+        self.presenter.input = PostsViewModel(posts: postsSource, showDetail: detailsFlow)
     }
     
-    public init(postsSource: StateSource<[PostModel]>, detailsFlow: Flow<PostModel, Any>) {
-        self.postsSource = postsSource
-        self.detailsFlow = detailsFlow
+    public override func present(animated: Bool, callback: (data: Any?, error: ErrorType?) -> () = { (data, error) in return }) {
+        self.presenter.present(animated)
     }
     
-    public override func present(animated: Bool, callback: (data: Any?, error: ErrorType?) -> ()) {
-        
+    public override func dismiss(animated: Bool, callback: () -> () = { return } ) {
+        self.presenter.dismiss(animated, callback: callback)
     }
-    
-    
 }

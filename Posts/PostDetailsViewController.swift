@@ -10,7 +10,7 @@ import UIKit
 import Domain
 
 class PostDetailsViewController: UIViewController {
-    var source: StateSource<PostDetailsModel>!
+    var source: Source<State<PostDetailsViewModel>>!
     
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var bodyTextView: UITextView!
@@ -43,7 +43,7 @@ class PostDetailsViewController: UIViewController {
         self.titleLabel.text = String(error)
     }
     
-    func renderData(data: PostDetailsModel) {
+    func renderData(data: PostDetailsViewModel) {
         self.titleLabel.text = data.title
         self.bodyTextView.text = data.body
         self.usernameLabel.text = data.username ?? "Loading..."

@@ -23,4 +23,9 @@ class ViewTests: XCTestCase {
     func setUpViewController(rootViewController: UIViewController) {
         UIApplication.sharedApplication().keyWindow?.rootViewController = rootViewController
     }
+    
+    func wait() {
+        self.expectationForNotification("totally_random_name", object: nil, handler: nil)
+        self.waitForExpectationsWithTimeout(1000000, handler: nil)
+    }
 }

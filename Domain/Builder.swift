@@ -7,6 +7,7 @@
 //
 
 public enum BuilderError: ErrorType {
+    case InputMissing
     case CouldNotParse
 }
 

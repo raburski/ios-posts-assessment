@@ -10,14 +10,15 @@ import Foundation
 import Domain
 
 public class Flow<Input, Output>: Interactor<Input, Output> {
+    public override init() {}
     override public func execute(callback: (data: Output?, error: ErrorType?) -> ()) {
         self.present(callback: callback)
     }
 
-    public func present(animated: Bool = true, callback: (data: Output?, error: ErrorType?) -> ()) {
+    public func present(animated: Bool = true, callback: (data: Output?, error: ErrorType?) -> () = { (data, error) in return }) {
         
     }
-    public func dismiss(animated: Bool = true, callback: (data: Output?, error: ErrorType?) -> ()) {
+    public func dismiss(animated: Bool = true, callback: () -> () = { return }) {
         
     }
 }
