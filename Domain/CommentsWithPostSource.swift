@@ -7,21 +7,26 @@
 //
 
 
-public class CommentsWithPostSource: StateSource<[CommentModel]> {
-    let post: PostModel
-    let commentsSource: StateSource<[CommentModel]>
-    public init(post: PostModel, commentsSource: StateSource<[CommentModel]>) {
-        self.post = post
+public class CommentsWithPostSource: Source<State<[CommentModel]>> {
+    let postSource: Source<PostModel?>
+    let commentsSource: Source<State<[CommentModel]>>
+    public init(postSource: Source<PostModel?>, commentsSource: Source<State<[CommentModel]>>) {
+        self.postSource = postSource
         self.commentsSource = commentsSource
         super.init()
         self.subscribeSelf(self.commentsSource)
+        self.subscribeSelf(self.postSource)
     }
     
     override public func getState() -> State<[CommentModel]> {
+        guard let post = self.postSource.state else {
+            return .loading
+        }
+        
         switch self.commentsSource.state {
         case .loading: return .loading
         case .error(let error): return .error(error: error)
-        case .ready(let comments): return .ready(data: self.commentsFilteredWithPost(comments, post: self.post))
+        case .ready(let comments): return .ready(data: self.commentsFilteredWithPost(comments, post: post))
         }
     }
     

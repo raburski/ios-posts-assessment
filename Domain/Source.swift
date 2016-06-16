@@ -29,6 +29,11 @@ public class Source<Output> {
         self.internalState = state
     }
     
+    public func setState(state: Output?) {
+        self.internalState = state
+        self.notifyUpdate()
+    }
+    
     public func getState() -> Output {
         return self.internalState!
     }
@@ -57,4 +62,28 @@ public class StateSource<Output>: Source<State<Output>> {
         return .error(error: RuntimeError.MissingImplementation)
     }
 }
+
+public class QueryableSource<Query, Output>: Source<Output> {
+    let inputSource: Source<Query>
+    let outputSource: Source<Output>
+    
+    public var query: Query {
+        get { return self.inputSource.state }
+        set { self.inputSource.setState(newValue) }
+    }
+    
+    public init(inputSource: Source<Query>, outputSource: Source<Output>) {
+        self.inputSource = inputSource
+        self.outputSource = outputSource
+        super.init()
+        self.subscribeSelf(self.outputSource)
+    }
+    
+    override public func getState() -> Output {
+        return self.outputSource.getState()
+    }
+}
+
+
+
 

@@ -22,6 +22,26 @@ public class SourceFactory {
         return self.servicesProvider.postsService
     }
     
+    public func usersSource() -> StateSource<[UserModel]> {
+        return self.servicesProvider.usersService
+    }
+    
+    public func commentsSource() -> StateSource<[CommentModel]> {
+        return self.servicesProvider.commentsService
+    }
+    
+    public func userWithPostQueryable() -> QueryableSource<PostModel?, State<UserModel>> {
+        let postSource = Source<PostModel?>()
+        let userSource = UserWithPostSource(postSource: postSource, usersSource: SourceFactory.sharedFactory.usersSource())
+        return QueryableSource(inputSource: postSource, outputSource: userSource)
+    }
+    
+    public func commentsWithPostQueryable() -> QueryableSource<PostModel?, State<[CommentModel]>> {
+        let postSource = Source<PostModel?>()
+        let commentsSource = CommentsWithPostSource(postSource: postSource, commentsSource: SourceFactory.sharedFactory.commentsSource())
+        return QueryableSource(inputSource: postSource, outputSource: commentsSource)
+    }
+    
 //    public func postDetailsSourceWithPost(post: PostModel) -> Source<PostDetailsModel> {
 //        let userSource = UserWithPostSource(post: post, usersSource: self.servicesProvider.usersService)
 //        let commentsSource = CommentsWithPostSource(post: post, commentsSource: self.servicesProvider.commentsService)

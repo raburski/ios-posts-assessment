@@ -67,10 +67,6 @@ public class PostsViewController: TableViewController<PostsListModel> {
     override public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.input.select.input = self.tableViewDataSource.postForIndexPath(indexPath)
         self.input.select.execute()
-//        let post = self.tableViewDataSource.postForIndexPath(indexPath)
-//        let detailsViewController = PostDetailsViewController()
-//        detailsViewController.source = SourceFactory.sharedFactory.postDetailsSourceWithPost(post)
-//        self.navigationController?.pushViewController(detailsViewController, animated: true)
     }
     
 }

@@ -8,9 +8,12 @@
 
 import Foundation
 import Application
+import Domain
 import UIKit
 
 public class ViewPresenter<Input>: Presenter<Input> {
+    public let viewSource: Source<UIViewController?> = Source()
+    
     let builder: ViewBuilder<Input, UIViewController>
     let transition: Transition<UIViewController>
     public init(builder: ViewBuilder<Input, UIViewController>, transition: Transition<UIViewController>) {
@@ -21,8 +24,10 @@ public class ViewPresenter<Input>: Presenter<Input> {
     override public func present(animated: Bool = true, callback: () -> () = { () -> () in return }) {
         self.builder.input = self.input
         do {
-            self.transition.input = try self.builder.build()
+            let viewController = try self.builder.build()
+            self.transition.input = viewController
             self.transition.present(animated)
+            self.viewSource.setState(viewController)
         } catch {
             print("WARNING: Failed to present View: %@", error)
         }

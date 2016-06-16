@@ -11,8 +11,8 @@ import Domain
 import UIKit
 
 public class PresentTransition: Transition<UIViewController> {
-    let viewControllerSource: Source<UINavigationController?>
-    public init(viewControllerSource: Source<UINavigationController?>) {
+    let viewControllerSource: Source<UIViewController?>
+    public init(viewControllerSource: Source<UIViewController?>) {
         self.viewControllerSource = viewControllerSource
     }
     public override func present(animated: Bool, callback: () -> ()) {

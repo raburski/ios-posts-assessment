@@ -14,7 +14,6 @@ import View
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    var appFlow: Flow<Any, Any>!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         BuddyBuildSDK.setup()
@@ -25,12 +24,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window
-
-        let presenter = ViewPresenter(builder: PostsViewBuilder(), transition: PushTransition(viewControllerSource: Source<UINavigationController?>(state: navigationController)))
         
-        self.appFlow = PostsFlow(postsSource: SourceFactory.sharedFactory.postsSource(), detailsFlow: Flow<PostModel, Any>(), presenter: presenter)
-        self.appFlow.present()
-            
+        let navigationControllerSource = Source<UINavigationController?>(state: navigationController)
+        let pushTransition = PushTransition(viewControllerSource: navigationControllerSource)
+        
+        let listPresenter = ViewPresenter(
+            builder: PostsViewBuilder(),
+            transition: pushTransition
+        )
+        
+        let detailPresenter = ViewPresenter(
+            builder: PostDetailsViewBuilder(),
+            transition: pushTransition
+        )
+        
+        let detailFlow = PostDetailsFlow(presenter: detailPresenter, userSource: SourceFactory.sharedFactory.userWithPostQueryable(), commentsSource: SourceFactory.sharedFactory.commentsWithPostQueryable())
+
+        
+        listPresenter.input = PostsListModel(posts: SourceFactory.sharedFactory.postsSource(), select: detailFlow)
+        listPresenter.present()
+        
         return true
     }
 

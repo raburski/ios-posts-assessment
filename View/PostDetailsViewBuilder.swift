@@ -6,8 +6,21 @@
 //  Copyright © 2016 Rzeczy. All rights reserved.
 //
 
-//import Cocoa
-//
-//class PostDetailsViewBuilder: ViewBuilder {
-//
-//}
+import Foundation
+import Domain
+import Application
+import UIKit
+
+public class PostDetailsViewBuilder: ViewBuilder<PostDetailsModel, UIViewController> {
+    override public init() {
+        super.init()
+    }
+    public override func build() throws -> UIViewController {
+        guard let input = self.input else {
+            throw BuilderError.InputMissing
+        }
+        let viewController = PostDetailsViewController()
+        viewController.source = PostDetailsViewModelSource(post: input.post, userSource: input.userSource, commentsSource: input.commentsSource)
+        return viewController
+    }
+}

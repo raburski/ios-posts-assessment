@@ -7,21 +7,26 @@
 //
 
 public class UserWithPostSource: StateSource<UserModel> {
-    let post: PostModel
-    let usersSource: StateSource<[UserModel]>
-    public init(post: PostModel, usersSource: StateSource<[UserModel]>) {
-        self.post = post
+    let postSource: Source<PostModel?>
+    let usersSource: Source<State<[UserModel]>>
+    public init(postSource: Source<PostModel?>, usersSource: Source<State<[UserModel]>>) {
+        self.postSource = postSource
         self.usersSource = usersSource
         super.init()
         self.subscribeSelf(self.usersSource)
+        self.subscribeSelf(self.postSource)
     }
     
     override public func getState() -> State<UserModel> {
+        guard let post = self.postSource.state else {
+            return .loading
+        }
+        
         switch self.usersSource.state {
         case .loading: return .loading
         case .error(let error): return .error(error: error)
         case .ready(let users):
-            if let user = self.usersFilteredWithPost(users, post: self.post) {
+            if let user = self.usersFilteredWithPost(users, post: post) {
                 return .ready(data: user)
             } else {
                 return .error(error: SourceError.NoDataReturned)
