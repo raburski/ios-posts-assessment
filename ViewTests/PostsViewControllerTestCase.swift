@@ -17,14 +17,14 @@ class PostsViewControllerTestCase: ViewTests {
         PostModel(id: 2, userId: 1, title: "Siemka2", body: "Siemanko2")
     ]
     
-    func setUpWithViewModel(viewModel: PostsViewModel) {
+    func setUpWithViewModel(viewModel: PostsListModel) {
         let view = PostsViewController(input: viewModel)
         super.setUpNavigationController(view)
     }
 
     func testRendersPosts() {
         let postsSource = Source(state: State.ready(data: self.posts))
-        let viewModel = PostsViewModel(posts: postsSource, showDetail: Interactor<PostModel, Any>())
+        let viewModel = PostsListModel(posts: postsSource, select: Interactor<PostModel, Any>())
         self.setUpWithViewModel(viewModel)
         
         self.tester().waitForViewsWithAccessibilityLabels(posts.map({ (post: PostModel) -> String in
@@ -34,7 +34,7 @@ class PostsViewControllerTestCase: ViewTests {
     
     func testRendersLoading() {
         let postsSource = Source<State<[PostModel]>>(state: State.loading)
-        let viewModel = PostsViewModel(posts: postsSource, showDetail: Interactor<PostModel, Any>())
+        let viewModel = PostsListModel(posts: postsSource, select: Interactor<PostModel, Any>())
         self.setUpWithViewModel(viewModel)
         
         self.tester().waitForViewWithAccessibilityLabel("Loading")
@@ -42,7 +42,7 @@ class PostsViewControllerTestCase: ViewTests {
     
     func testRendersError() {
         let postsSource = Source<State<[PostModel]>>(state: State.error(error: TestError.Error))
-        let viewModel = PostsViewModel(posts: postsSource, showDetail: Interactor<PostModel, Any>())
+        let viewModel = PostsListModel(posts: postsSource, select: Interactor<PostModel, Any>())
         self.setUpWithViewModel(viewModel)
         
         self.tester().waitForViewWithAccessibilityLabel("Error")
@@ -51,7 +51,7 @@ class PostsViewControllerTestCase: ViewTests {
     func testInvokesShowDetail() {
         let showDetails = ExpectationInteractor<PostModel, Any>(expectation: self.expectationWithDescription("Interactor"))
         let postsSource = Source(state: State.ready(data: self.posts))
-        let viewModel = PostsViewModel(posts: postsSource, showDetail: showDetails)
+        let viewModel = PostsListModel(posts: postsSource, select: showDetails)
         self.setUpWithViewModel(viewModel)
         self.tester().tapViewWithAccessibilityLabel(self.posts.first!.title)
         
