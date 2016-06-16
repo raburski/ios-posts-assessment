@@ -49,7 +49,7 @@ class PostsViewControllerTestCase: ViewTests {
     }
     
     func testInvokesShowDetail() {
-        let showDetails = ExpectationInteractor<PostModel, Any>(expectation: self.expectationWithDescription("Interactor"))
+        let showDetails: Interactor<PostModel, Any> = self.expectationInteractor()
         let postsSource = Source(state: State.ready(data: self.posts))
         let viewModel = PostsListModel(posts: postsSource, select: showDetails)
         self.setUpWithViewModel(viewModel)

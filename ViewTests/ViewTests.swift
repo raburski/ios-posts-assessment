@@ -10,6 +10,7 @@ import XCTest
 import UIKit
 import View
 import KIF
+import Domain
 
 enum TestError: ErrorType {
     case Error
@@ -27,5 +28,9 @@ class ViewTests: XCTestCase {
     func wait() {
         self.expectationForNotification("totally_random_name", object: nil, handler: nil)
         self.waitForExpectationsWithTimeout(1000000, handler: nil)
+    }
+    
+    func expectationInteractor<T, P>() -> Interactor<T, P> {
+        return ExpectationInteractor<T, P>(expectation: self.expectationWithDescription("Interactor"))
     }
 }
