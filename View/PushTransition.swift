@@ -8,6 +8,7 @@
 
 import Foundation
 import Domain
+import Application
 import UIKit
 
 public class PushTransition: Transition<UIViewController> {

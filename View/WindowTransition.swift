@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Application
 
-public class WindowTransition: Transition<UIViewController> {
+public class WindowTransition: Transition<UINavigationController> {
     let window: UIWindow
     public init(window: UIWindow) {
         self.window = window
+        super.init()
     }
     public override func present(animated: Bool, callback: () -> ()) {
         window.rootViewController = self.input

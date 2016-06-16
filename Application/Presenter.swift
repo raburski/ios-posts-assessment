@@ -10,7 +10,6 @@ import Foundation
 
 public class Presenter<Input> {
     public var input: Input?
-    public init() {}
     public func present(animated: Bool = true, callback: () -> () = { () -> () in return }) {
         
     }

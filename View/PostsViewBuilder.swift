@@ -12,9 +12,7 @@ import Application
 import UIKit
 
 public class PostsViewBuilder: ViewBuilder<PostsListModel, UIViewController> {
-    override public init() {
-        super.init()
-    }
+    public override init() { super.init() }
     public override func build() throws -> UIViewController {
         guard let input = self.input else {
             throw BuilderError.InputMissing

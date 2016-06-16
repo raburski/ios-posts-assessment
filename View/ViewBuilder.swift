@@ -10,5 +10,5 @@ import Foundation
 import Domain
 
 public class ViewBuilder<Input, Output>: Builder<Input, Output> {
-
+    public override init() { super.init() }
 }

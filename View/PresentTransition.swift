@@ -8,12 +8,14 @@
 
 import Foundation
 import Domain
+import Application
 import UIKit
 
 public class PresentTransition: Transition<UIViewController> {
     let viewControllerSource: Source<UIViewController?>
     public init(viewControllerSource: Source<UIViewController?>) {
         self.viewControllerSource = viewControllerSource
+        super.init()
     }
     public override func present(animated: Bool, callback: () -> ()) {
         guard let viewControllerBase = self.viewControllerSource.state, viewController = self.input else {

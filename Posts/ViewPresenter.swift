@@ -7,16 +7,15 @@
 //
 
 import Foundation
-import Application
 import Domain
 import UIKit
 
-public class ViewPresenter<Input>: Presenter<Input> {
-    public let viewSource: Source<UIViewController?> = Source()
+public class ViewPresenter<Input, View>: Presenter<Input> {
+    public let viewSource: Source<View?> = Source()
     
-    let builder: ViewBuilder<Input, UIViewController>
-    let transition: Transition<UIViewController>
-    public init(builder: ViewBuilder<Input, UIViewController>, transition: Transition<UIViewController>) {
+    let builder: ViewBuilder<Input, View>
+    let transition: Transition<View>
+    public init(builder: ViewBuilder<Input, View>, transition: Transition<View>) {
         self.builder = builder
         self.transition = transition
     }

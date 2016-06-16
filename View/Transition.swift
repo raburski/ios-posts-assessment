@@ -9,7 +9,8 @@
 import Foundation
 
 public class Transition<Input> {
-    var input: Input?
-    func present(animated: Bool, callback: () -> () = { return }) {}
-    func dismiss(animated: Bool, callback: () -> () = { return }) {}
+    public var input: Input?
+    public init() {}
+    public func present(animated: Bool, callback: () -> () = { return }) {}
+    public func dismiss(animated: Bool, callback: () -> () = { return }) {}
 }

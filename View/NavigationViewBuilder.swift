@@ -7,11 +7,10 @@
 //
 
 import UIKit
+import Application
 
 public class NavigationViewBuilder: ViewBuilder<Any, UINavigationController> {
-    override public init() {
-        super.init()
-    }
+    public override init() { super.init() }
     public override func build() throws -> UINavigationController {
         return UINavigationController()
     }

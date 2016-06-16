@@ -42,10 +42,7 @@
 		E83693001D0CBE4F0015A6EF /* ExpectationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83692FF1D0CBE4F0015A6EF /* ExpectationInteractor.swift */; };
 		E84BD3FF1D118B09003A9674 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84BD3FE1D118B09003A9674 /* Presenter.swift */; };
 		E84BD4041D119179003A9674 /* PostDetailsFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84BD4031D119179003A9674 /* PostDetailsFlow.swift */; };
-		E84BD4081D11ADF3003A9674 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84BD4071D11ADF3003A9674 /* ViewBuilder.swift */; };
 		E84BD40B1D11AE3C003A9674 /* PostsViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84BD40A1D11AE3C003A9674 /* PostsViewBuilder.swift */; };
-		E84BD40F1D11AFA3003A9674 /* ViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84BD40E1D11AFA3003A9674 /* ViewPresenter.swift */; };
-		E84BD4111D11B001003A9674 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84BD4101D11B001003A9674 /* Transition.swift */; };
 		E84BD4141D11B0A3003A9674 /* PushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84BD4131D11B0A3003A9674 /* PushTransition.swift */; };
 		E84BD4161D11B377003A9674 /* PresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84BD4151D11B377003A9674 /* PresentTransition.swift */; };
 		E84BD4181D11CA80003A9674 /* WindowTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84BD4171D11CA80003A9674 /* WindowTransition.swift */; };
@@ -54,6 +51,9 @@
 		E84BD4201D11E9CE003A9674 /* PostDetailsViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84BD41F1D11E9CE003A9674 /* PostDetailsViewBuilder.swift */; };
 		E84BD4231D12C690003A9674 /* PostDetailsViewModelSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C145C1CF26B9C00329745 /* PostDetailsViewModelSource.swift */; };
 		E84BD4241D12CD40003A9674 /* PostDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C14531CF2633000329745 /* PostDetailsModel.swift */; };
+		E84BD4251D12F6B1003A9674 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84BD4071D11ADF3003A9674 /* ViewBuilder.swift */; };
+		E84BD4271D12F6FA003A9674 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84BD4101D11B001003A9674 /* Transition.swift */; };
+		E84BD4281D12F757003A9674 /* ViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84BD40E1D11AFA3003A9674 /* ViewPresenter.swift */; };
 		E85210341CF273A000A14DF1 /* UserWithPostSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85210331CF273A000A14DF1 /* UserWithPostSource.swift */; };
 		E85C14601CF26E2B00329745 /* CommentsWithPostSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C145F1CF26E2B00329745 /* CommentsWithPostSource.swift */; };
 		E8684F391D0211DE00539086 /* PostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8DDF6E91CFE0F3200B34251 /* PostsViewController.xib */; };
@@ -108,7 +108,6 @@
 		E8DDF6EB1CFE102000B34251 /* PostsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C161CF213FE0085ABC3 /* PostsTableViewDataSource.swift */; };
 		E8DDF6EC1CFE108100B34251 /* TableViewHeaderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E3C3C1CF21A5F0085ABC3 /* TableViewHeaderExtension.swift */; };
 		E8DDF6F01CFE176200B34251 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DDF6EF1CFE176200B34251 /* Flow.swift */; };
-		E8DDF6F41CFE1D4300B34251 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DDF6F31CFE1D4300B34251 /* Transition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,10 +258,10 @@
 		E83692FF1D0CBE4F0015A6EF /* ExpectationInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpectationInteractor.swift; sourceTree = "<group>"; };
 		E84BD3FE1D118B09003A9674 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		E84BD4031D119179003A9674 /* PostDetailsFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsFlow.swift; sourceTree = "<group>"; };
-		E84BD4071D11ADF3003A9674 /* ViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
+		E84BD4071D11ADF3003A9674 /* ViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewBuilder.swift; path = ../View/ViewBuilder.swift; sourceTree = "<group>"; };
 		E84BD40A1D11AE3C003A9674 /* PostsViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewBuilder.swift; sourceTree = "<group>"; };
 		E84BD40E1D11AFA3003A9674 /* ViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewPresenter.swift; path = ../Posts/ViewPresenter.swift; sourceTree = "<group>"; };
-		E84BD4101D11B001003A9674 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		E84BD4101D11B001003A9674 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Transition.swift; path = ../View/Transition.swift; sourceTree = "<group>"; };
 		E84BD4131D11B0A3003A9674 /* PushTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushTransition.swift; sourceTree = "<group>"; };
 		E84BD4151D11B377003A9674 /* PresentTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentTransition.swift; sourceTree = "<group>"; };
 		E84BD4171D11CA80003A9674 /* WindowTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowTransition.swift; sourceTree = "<group>"; };
@@ -274,7 +273,7 @@
 		E85C14531CF2633000329745 /* PostDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsModel.swift; sourceTree = "<group>"; };
 		E85C14551CF265F900329745 /* PostDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostDetailsViewController.xib; sourceTree = "<group>"; };
 		E85C14571CF268D800329745 /* ServicesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServicesProvider.swift; path = ../Application/ServicesProvider.swift; sourceTree = "<group>"; };
-		E85C145C1CF26B9C00329745 /* PostDetailsViewModelSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsViewModelSource.swift; sourceTree = "<group>"; };
+		E85C145C1CF26B9C00329745 /* PostDetailsViewModelSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostDetailsViewModelSource.swift; path = ../Application/PostDetailsViewModelSource.swift; sourceTree = "<group>"; };
 		E85C145F1CF26E2B00329745 /* CommentsWithPostSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsWithPostSource.swift; sourceTree = "<group>"; };
 		E8684F3B1D02230300539086 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E8684F401D02241E00539086 /* PostsListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsListModel.swift; sourceTree = "<group>"; };
@@ -327,7 +326,6 @@
 		E8DDF6C31CFE0D6300B34251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8DDF6E91CFE0F3200B34251 /* PostsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostsViewController.xib; path = View/PostsViewController.xib; sourceTree = SOURCE_ROOT; };
 		E8DDF6EF1CFE176200B34251 /* Flow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
-		E8DDF6F31CFE1D4300B34251 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -498,9 +496,8 @@
 				E80E3C1F1CF217910085ABC3 /* Application.h */,
 				E80E3C211CF217910085ABC3 /* Info.plist */,
 				E81E904D1D022C6900F80FD3 /* Flows */,
-				E8DDF6F31CFE1D4300B34251 /* Transition.swift */,
 				E8684F3F1D02240300539086 /* ViewModels */,
-				E84BD3FE1D118B09003A9674 /* Presenter.swift */,
+				E84BD4261D12F6D7003A9674 /* Base Types */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -517,7 +514,6 @@
 		E81E904D1D022C6900F80FD3 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				E8DDF6EF1CFE176200B34251 /* Flow.swift */,
 				E81E904E1D022C9C00F80FD3 /* MenuFlow.swift */,
 				E81E90501D022FDA00F80FD3 /* PostsFlow.swift */,
 				E84BD4031D119179003A9674 /* PostDetailsFlow.swift */,
@@ -528,7 +524,6 @@
 		E84BD4091D11AE15003A9674 /* Builders */ = {
 			isa = PBXGroup;
 			children = (
-				E84BD4071D11ADF3003A9674 /* ViewBuilder.swift */,
 				E84BD4191D11CB0B003A9674 /* NavigationViewBuilder.swift */,
 			);
 			name = Builders;
@@ -537,7 +532,6 @@
 		E84BD4121D11B08B003A9674 /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
-				E84BD4101D11B001003A9674 /* Transition.swift */,
 				E84BD4131D11B0A3003A9674 /* PushTransition.swift */,
 				E84BD4151D11B377003A9674 /* PresentTransition.swift */,
 				E84BD4171D11CA80003A9674 /* WindowTransition.swift */,
@@ -558,6 +552,7 @@
 		E84BD4221D11EBFF003A9674 /* PostDetails */ = {
 			isa = PBXGroup;
 			children = (
+				E85C145C1CF26B9C00329745 /* PostDetailsViewModelSource.swift */,
 				E84BD41F1D11E9CE003A9674 /* PostDetailsViewBuilder.swift */,
 				E84BD41D1D11D81F003A9674 /* PostDetailsViewModel.swift */,
 				E85C14511CF262EF00329745 /* PostDetailsViewController.swift */,
@@ -565,13 +560,16 @@
 			name = PostDetails;
 			sourceTree = "<group>";
 		};
-		E85C145B1CF26A0A00329745 /* Sources */ = {
+		E84BD4261D12F6D7003A9674 /* Base Types */ = {
 			isa = PBXGroup;
 			children = (
-				E85C145C1CF26B9C00329745 /* PostDetailsViewModelSource.swift */,
+				E84BD3FE1D118B09003A9674 /* Presenter.swift */,
+				E84BD40E1D11AFA3003A9674 /* ViewPresenter.swift */,
+				E84BD4071D11ADF3003A9674 /* ViewBuilder.swift */,
+				E8DDF6EF1CFE176200B34251 /* Flow.swift */,
+				E84BD4101D11B001003A9674 /* Transition.swift */,
 			);
-			name = Sources;
-			path = ../Application;
+			name = "Base Types";
 			sourceTree = "<group>";
 		};
 		E85C145E1CF26DE900329745 /* Sources */ = {
@@ -746,14 +744,12 @@
 			isa = PBXGroup;
 			children = (
 				E8684F3B1D02230300539086 /* ViewController.swift */,
-				E84BD40E1D11AFA3003A9674 /* ViewPresenter.swift */,
 				E80E3C3C1CF21A5F0085ABC3 /* TableViewHeaderExtension.swift */,
 				E84BD4211D11E9ED003A9674 /* Posts */,
 				E84BD4221D11EBFF003A9674 /* PostDetails */,
 				E80E3C071CF211DB0085ABC3 /* Views */,
 				E8DDF6C11CFE0D6300B34251 /* View.h */,
 				E8DDF6C31CFE0D6300B34251 /* Info.plist */,
-				E85C145B1CF26A0A00329745 /* Sources */,
 				E84BD4091D11AE15003A9674 /* Builders */,
 				E84BD4121D11B08B003A9674 /* Transitions */,
 			);
@@ -1254,14 +1250,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8DDF6F41CFE1D4300B34251 /* Transition.swift in Sources */,
+				E84BD4271D12F6FA003A9674 /* Transition.swift in Sources */,
 				E84BD3FF1D118B09003A9674 /* Presenter.swift in Sources */,
+				E84BD4251D12F6B1003A9674 /* ViewBuilder.swift in Sources */,
 				E8DDF6F01CFE176200B34251 /* Flow.swift in Sources */,
 				E84BD4041D119179003A9674 /* PostDetailsFlow.swift in Sources */,
 				E81E90511D022FDA00F80FD3 /* PostsFlow.swift in Sources */,
 				E8684F411D02241E00539086 /* PostsListModel.swift in Sources */,
 				E84BD4241D12CD40003A9674 /* PostDetailsModel.swift in Sources */,
 				E81E904F1D022C9C00F80FD3 /* MenuFlow.swift in Sources */,
+				E84BD4281D12F757003A9674 /* ViewPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1375,17 +1373,14 @@
 				E8684F3C1D02230300539086 /* ViewController.swift in Sources */,
 				E8DDF6DC1CFE0DAA00B34251 /* InterfaceBuilderView.swift in Sources */,
 				E8DDF6EB1CFE102000B34251 /* PostsTableViewDataSource.swift in Sources */,
-				E84BD4081D11ADF3003A9674 /* ViewBuilder.swift in Sources */,
 				E8DDF6EC1CFE108100B34251 /* TableViewHeaderExtension.swift in Sources */,
 				E84BD4181D11CA80003A9674 /* WindowTransition.swift in Sources */,
-				E84BD4111D11B001003A9674 /* Transition.swift in Sources */,
 				E84BD41E1D11D81F003A9674 /* PostDetailsViewModel.swift in Sources */,
 				E84BD40B1D11AE3C003A9674 /* PostsViewBuilder.swift in Sources */,
 				E8DDF6DF1CFE0DAA00B34251 /* LoadingView.swift in Sources */,
 				E8DDF6DD1CFE0DAA00B34251 /* ErrorView.swift in Sources */,
 				E84BD4141D11B0A3003A9674 /* PushTransition.swift in Sources */,
 				E84BD4231D12C690003A9674 /* PostDetailsViewModelSource.swift in Sources */,
-				E84BD40F1D11AFA3003A9674 /* ViewPresenter.swift in Sources */,
 				E8DDF6E71CFE0DDF00B34251 /* PostDetailsViewController.swift in Sources */,
 				E84BD4201D11E9CE003A9674 /* PostDetailsViewBuilder.swift in Sources */,
 				E8DDF6C21CFE0D6300B34251 /* View.h in Sources */,

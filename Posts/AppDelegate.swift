@@ -19,14 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         BuddyBuildSDK.setup()
         
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let navigationController = UINavigationController()
-        
-        window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window
         
-        let navigationControllerSource = Source<UINavigationController?>(state: navigationController)
-        let pushTransition = PushTransition(viewControllerSource: navigationControllerSource)
+        let navigationPresenter = ViewPresenter(
+            builder: NavigationViewBuilder(),
+            transition: WindowTransition(window: window)
+        )
+        
+        let pushTransition = PushTransition(viewControllerSource: navigationPresenter.viewSource)
         
         let listPresenter = ViewPresenter(
             builder: PostsViewBuilder(),
@@ -42,6 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         
         listPresenter.input = PostsListModel(posts: SourceFactory.sharedFactory.postsSource(), select: detailFlow)
+        
+        navigationPresenter.present()
         listPresenter.present()
         
         return true
