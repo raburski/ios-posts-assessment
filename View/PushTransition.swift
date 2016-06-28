@@ -22,5 +22,6 @@ public class PushTransition: Transition<UIViewController> {
         }
         
         viewControllerBase.pushViewController(viewController, animated: animated)
+        callback()
     }
 }

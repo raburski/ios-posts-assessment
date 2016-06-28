@@ -16,7 +16,7 @@ public class PostsFlow: Flow<Any, Any> {
         self.presenter.input = PostsListModel(posts: postsSource, select: detailsFlow)
     }
     
-    public override func present(animated: Bool, callback: (data: Any?, error: ErrorType?) -> () = { (data, error) in return }) {
+    public override func present(animated: Bool = true, callback: (data: Any?, error: ErrorType?) -> () = { (data, error) in return }) {
         self.presenter.present(animated)
     }
     

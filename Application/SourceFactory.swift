@@ -9,7 +9,6 @@
 import Domain
 import Application
 import Infrastructure
-import View
 
 public class SourceFactory {
     public static let sharedFactory = SourceFactory()
@@ -41,11 +40,4 @@ public class SourceFactory {
         let commentsSource = CommentsWithPostSource(postSource: postSource, commentsSource: SourceFactory.sharedFactory.commentsSource())
         return QueryableSource(inputSource: postSource, outputSource: commentsSource)
     }
-    
-//    public func postDetailsSourceWithPost(post: PostModel) -> Source<PostDetailsModel> {
-//        let userSource = UserWithPostSource(post: post, usersSource: self.servicesProvider.usersService)
-//        let commentsSource = CommentsWithPostSource(post: post, commentsSource: self.servicesProvider.commentsService)
-//        return PostDetailsSource(post: post, userSource: userSource, commentsSource: commentsSource)
-//    }
-
 }

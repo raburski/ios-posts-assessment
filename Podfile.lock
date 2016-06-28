@@ -6,6 +6,9 @@ PODS:
   - KIF/Core (3.4.2)
   - SwiftyDispatch (0.3.0)
   - SwiftyJSON (2.3.2)
+  - XCTest-Gherkin (0.5.0):
+    - XCTest-Gherkin/Core (= 0.5.0)
+  - XCTest-Gherkin/Core (0.5.0)
 
 DEPENDENCIES:
   - BuddyBuildSDK
@@ -13,6 +16,7 @@ DEPENDENCIES:
   - KIF (~> 3.0)
   - SwiftyDispatch
   - SwiftyJSON
+  - XCTest-Gherkin
 
 SPEC CHECKSUMS:
   BuddyBuildSDK: c74a4e731b012368e336725d3221b8b934707171
@@ -20,5 +24,6 @@ SPEC CHECKSUMS:
   KIF: b518c9831453abea5afdbbde3908ec47832d6d56
   SwiftyDispatch: 88fbb025c29b798d3ac839e3eed828c8c65b01cc
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  XCTest-Gherkin: a45ad2ddf41f3b561eac4499f5a26017ac68421f
 
 COCOAPODS: 0.39.0

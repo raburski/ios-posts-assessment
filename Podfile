@@ -9,3 +9,7 @@ pod 'BuddyBuildSDK'
 target 'ViewUnitTests' do
   pod 'KIF', '~> 3.0'
 end
+
+target 'ApplicationTests' do
+  pod 'XCTest-Gherkin'
+end

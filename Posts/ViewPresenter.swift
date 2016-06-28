@@ -24,9 +24,10 @@ public class ViewPresenter<Input, View>: Presenter<Input> {
         self.builder.input = self.input
         do {
             let viewController = try self.builder.build()
+            self.viewSource.setState(viewController)
             self.transition.input = viewController
             self.transition.present(animated)
-            self.viewSource.setState(viewController)
+            callback()
         } catch {
             print("WARNING: Failed to present View: %@", error)
         }

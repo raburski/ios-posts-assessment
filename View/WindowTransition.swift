@@ -18,5 +18,6 @@ public class WindowTransition: Transition<UINavigationController> {
     public override func present(animated: Bool, callback: () -> ()) {
         window.rootViewController = self.input
         window.becomeKeyWindow()
+        callback()
     }
 }

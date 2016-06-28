@@ -7,30 +7,24 @@
 //
 
 import XCTest
+import XCTest_Gherkin
 @testable import Application
+@testable import Domain
 
 class ApplicationTests: XCTestCase {
-    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        TestApplication.shared = TestApplication()
+        TestApplication.shared.mainFlow.present(false)
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
+
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+        
+//        TestApplication.shared.listPresenter.selectFirstPost()
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+        Given("I have an example")
+        When("When I test it")
+        Then("The test succeeded")
     }
     
 }
